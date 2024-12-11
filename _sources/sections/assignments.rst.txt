@@ -4,7 +4,7 @@ Assignments
 Symbolic supports various forms of assignment, including normal assignments, chained assignments, and unpacking of collections. This allows for flexible variable initialization and management.
 
 Normal Single Assignment
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Normal assignment is used to assign a value to a variable.
 
@@ -14,7 +14,7 @@ Normal assignment is used to assign a value to a variable.
     print("x =", x);
 
 Single Value Assignment
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can assign a single value to multiple variables in one statement, also known as chained assignment.
 
@@ -24,7 +24,7 @@ You can assign a single value to multiple variables in one statement, also known
     print("x = y =", x, y);
 
 Unpack Normal
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 Unpacking allows you to assign values from collections (like lists) to variables.
 
@@ -34,7 +34,7 @@ Unpacking allows you to assign values from collections (like lists) to variables
     print("x =", x, "y =", y);
 
 Unpack Asterisk (No Name)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The asterisk (`*`) can be used in unpacking to ignore specific elements. This is useful when you want to capture the remaining elements of a collection without naming them.
 
@@ -44,7 +44,7 @@ The asterisk (`*`) can be used in unpacking to ignore specific elements. This is
     print("y =", y);
 
 Unpack Asterisk (With Name)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can also use the asterisk (`*`) to collect the remaining items into a variable, allowing you to capture multiple values at once.
 

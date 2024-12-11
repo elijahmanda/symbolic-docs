@@ -35,6 +35,7 @@ Binary Operators
 Binary operators perform operations on two operands. These include arithmetic, logical, and bitwise operators.
 
 Supported Binary Operators:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Arithmetic: **`+`**, **`-`**, **`*`**, **`/`**, **`//`**, **`÷`**, **`×`**, **`%`**
 - Logical: **`||`**, **`&&`**
 - Bitwise: **`|`**, **`&`**, **`^`**
@@ -68,6 +69,7 @@ Prefix Operators
 Prefix operators work on a single operand placed immediately after the operator.
 
 Supported Prefix Operators:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Arithmetic: **`+`**, **`-`**
 - Logical: **`!`**
 - Bitwise: **`~`**
@@ -88,6 +90,7 @@ Postfix Operators
 Postfix operators operate on a single operand placed before the operator. 
 
 Supported Postfix Operators:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Logical: **`!`**
 - Ranges: **`..`**
 - Special: **`°`**, **`'`**
@@ -105,6 +108,7 @@ Equality and Comparison Operators
 Equality and comparison operators are used to compare two operands.
 
 Supported Comparison Operators:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - **`<`**: Less than
 - **`>`**: Greater than
 - **`<=`**: Less than or equal to

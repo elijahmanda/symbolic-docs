@@ -10,21 +10,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2  # Use the latest stable version of the checkout action
+    # Checkout the code
+    - name: Checkout code
+      uses: actions/checkout@v2  # Use the latest stable version of the checkout action
 
-    # Install dependencies from requirements.txt
+    # Install dependencies from requirements.txt in the docs folder
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip  # Upgrade pip
         pip install -r docs/requirements.txt  # Install dependencies from the requirements.txt in the docs folder
 
-    # Use make to build the documentation (calls make html)
+    # Build documentation using make
     - name: Build Docs with Make
       run: |
         cd docs  # Navigate to the docs directory
         make html  # Run the make command to build the HTML documentation
 
-    # Publish built docs to gh-pages branch
+    # Commit documentation changes to gh-pages branch
     - name: Commit documentation changes
       run: |
         git clone --branch gh-pages https://github.com/elijahmanda/symbolic-docs.git gh-pages  # Clone the gh-pages branch
@@ -35,4 +37,11 @@ jobs:
         git config --local user.name "GitHub Action"
         git add .
         git commit -m "Update documentation" -a || true  # Skip if no changes
-        git push origin gh-pages  # Push changes to the gh-pages branch
+
+    # Push changes to gh-pages
+    - name: Push changes
+      uses: ad-m/github-push-action@master  # Push changes to gh-pages using the GitHub Push Action
+      with:
+        branch: gh-pages
+        directory: gh-pages
+        github_token: ${{ secrets.GITHUB_TOKEN }}  # Use the GITHUB_TOKEN for authentication

@@ -1,4 +1,4 @@
-Wel to Symbolic Language's Documentation!
+Welcome to Symbolic Language's Documentation!
 =============================================
 
 **Symbolic Language** is an interpreted, dynamically-typed programming language tailored for advanced computational tasks across various domains, including mathematics, science, and engineering. It features concise syntax, lazy evaluation, and modular design, enabling developers to create complex systems efficiently and elegantly.

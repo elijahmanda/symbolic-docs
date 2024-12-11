@@ -271,10 +271,14 @@ This functionality makes it easier to express large numbers without manually wri
 <span class="n">budget</span> <span class="o">=</span> <span class="mi">1</span><span class="o">.</span><span class="mi">5</span><span class="n">B</span><span class="o">;</span>      <span class="c1"># 1.5 billion dollars</span>
 </pre></div>
 </div>
-<p>In these examples:
-- <cite>population</cite> will evaluate to 7,800,000.
-- <cite>distance</cite> will evaluate to 2,000.
-- <cite>budget</cite> will evaluate to 1,500,000,000.</p>
+</section>
+<section id="in-these-examples">
+<h3>In these examples:<a class="headerlink" href="#in-these-examples" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><cite>population</cite> will evaluate to 7,800,000.</p></li>
+<li><p><cite>distance</cite> will evaluate to 2,000.</p></li>
+<li><p><cite>budget</cite> will evaluate to 1,500,000,000.</p></li>
+</ul>
 <p>These suffixes provide convenience when working with large datasets, financial figures, or statistical values.</p>
 </section>
 </section>
@@ -346,41 +350,53 @@ This functionality makes it easier to express large numbers without manually wri
 <span class="n">expression3</span> <span class="o">=</span> <span class="mi">5</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="n">b</span><span class="o">;</span>           <span class="c1"># 5 * a^2 * b</span>
 </pre></div>
 </div>
-<p>In these examples:
-- <cite>expression1</cite> evaluates to <cite>3 * x^2 + 9</cite>.
-- <cite>expression2</cite> evaluates to <cite>2 * y * (3x + 5)</cite>.
-- <cite>expression3</cite> evaluates to <cite>5 * a^2 * b</cite>.</p>
+</section>
+<section id="id3">
+<h3>In these examples:<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><cite>expression1</cite> evaluates to <cite>3 * x^2 + 9</cite>.</p></li>
+<li><p><cite>expression2</cite> evaluates to <cite>2 * y * (3x + 5)</cite>.</p></li>
+<li><p><cite>expression3</cite> evaluates to <cite>5 * a^2 * b</cite>.</p></li>
+</ul>
 </section>
 </section>
 <section id="implied-multiplication-in-functions-and-constants">
 <h2>Implied Multiplication in Functions and Constants<a class="headerlink" href="#implied-multiplication-in-functions-and-constants" title="Link to this heading"></a></h2>
 <p>Implied multiplication can also be applied when working with functions and constants in Symbolic. This feature ensures that even function calls and constants can be written in a more natural, intuitive way.</p>
-<section id="id3">
-<h3>Example:<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<section id="id4">
+<h3>Example:<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
 <div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="c1"># Function and constant examples</span>
-<span class="n">f</span> <span class="o">=</span> <span class="mi">3</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="o">;</span>         <span class="c1"># f(x) = 3 * x^2 + 5 * x - 2</span>
-<span class="n">g</span> <span class="o">=</span> <span class="mi">2</span><span class="o">(</span><span class="mi">3</span><span class="n">x</span> <span class="o">-</span> <span class="mi">4</span><span class="o">);</span>             <span class="c1"># g(x) = 2 * (3x - 4)</span>
+<span class="n">f</span><span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="o">=</span> <span class="mi">3</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="o">;</span>         <span class="c1"># f(x) = 3 * x^2 + 5 * x - 2</span>
+<span class="n">g</span><span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="o">=</span> <span class="mi">2</span><span class="o">(</span><span class="mi">3</span><span class="n">x</span> <span class="o">-</span> <span class="mi">4</span><span class="o">);</span>             <span class="c1"># g(x) = 2 * (3x - 4)</span>
 </pre></div>
 </div>
-<p>Here:
-- <cite>f = 3x^2 + 5x - 2</cite> is interpreted as <cite>f(x) = 3 * x^2 + 5 * x - 2</cite>.
-- <cite>g = 2(3x - 4)</cite> is interpreted as <cite>g(x) = 2 * (3x - 4)</cite>.</p>
+</section>
+<section id="here">
+<h3>Here:<a class="headerlink" href="#here" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><cite>f(x) = 3x^2 + 5x - 2</cite> is interpreted as <cite>f(x) = 3 * x^2 + 5 * x - 2</cite>.</p></li>
+<li><p><cite>g(x) = 2(3x - 4)</cite> is interpreted as <cite>g(x) = 2 * (3x - 4)</cite>.</p></li>
+</ul>
 <p>This allows you to create and write functions in a concise way, removing the need to explicitly use multiplication symbols.</p>
 </section>
 </section>
 <section id="implied-multiplication-and-numbers-followed-by-names">
 <h2>Implied Multiplication and Numbers Followed by Names<a class="headerlink" href="#implied-multiplication-and-numbers-followed-by-names" title="Link to this heading"></a></h2>
 <p>When a number is immediately followed by a name or a variable, Symbolic interprets this as multiplication. This is a powerful feature for creating formulas where numbers are dynamically multiplied by variables or constants.</p>
-<section id="id4">
-<h3>Example:<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<section id="id5">
+<h3>Example:<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
 <div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numbers followed by names</span>
 <span class="n">totalCost</span> <span class="o">=</span> <span class="mi">10</span><span class="n">items</span><span class="o">;</span>    <span class="c1"># 10 * items</span>
 <span class="n">pricePerUnit</span> <span class="o">=</span> <span class="mi">20</span><span class="n">perItem</span><span class="o">;</span>  <span class="c1"># 20 * perItem</span>
 </pre></div>
 </div>
-<p>In these examples:
-- <cite>totalCost = 10items</cite> is interpreted as <cite>totalCost = 10 * items</cite>.
-- <cite>pricePerUnit = 20perItem</cite> is interpreted as <cite>pricePerUnit = 20 * perItem</cite>.</p>
+</section>
+<section id="id6">
+<h3>In these examples:<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><cite>totalCost = 10items</cite> is interpreted as <cite>totalCost = 10 * items</cite>.</p></li>
+<li><p><cite>pricePerUnit = 20perItem</cite> is interpreted as <cite>pricePerUnit = 20 * perItem</cite>.</p></li>
+</ul>
 <p>This feature helps when dealing with quantities, units, or even more complex formulas, and enables more flexible, human-readable code.</p>
 </section>
 </section>

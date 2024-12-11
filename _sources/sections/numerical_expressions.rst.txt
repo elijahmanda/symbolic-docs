@@ -26,6 +26,7 @@ Example:
     budget = 1.5B;      # 1.5 billion dollars
 
 In these examples:
+^^^^^^^^^^^^^^^^^^^^^
 - `population` will evaluate to 7,800,000.
 - `distance` will evaluate to 2,000.
 - `budget` will evaluate to 1,500,000,000.
@@ -88,6 +89,7 @@ Example:
     expression3 = 5a^2b;           # 5 * a^2 * b
 
 In these examples:
+^^^^^^^^^^^^^^^^^^^^
 - `expression1` evaluates to `3 * x^2 + 9`.
 - `expression2` evaluates to `2 * y * (3x + 5)`.
 - `expression3` evaluates to `5 * a^2 * b`.
@@ -102,12 +104,13 @@ Example:
 .. code-block:: symbolic
 
     # Function and constant examples
-    f = 3x^2 + 5x - 2;         # f(x) = 3 * x^2 + 5 * x - 2
-    g = 2(3x - 4);             # g(x) = 2 * (3x - 4)
+    f(x) = 3x^2 + 5x - 2;         # f(x) = 3 * x^2 + 5 * x - 2
+    g(x) = 2(3x - 4);             # g(x) = 2 * (3x - 4)
 
 Here:
-- `f = 3x^2 + 5x - 2` is interpreted as `f(x) = 3 * x^2 + 5 * x - 2`.
-- `g = 2(3x - 4)` is interpreted as `g(x) = 2 * (3x - 4)`.
+^^^^^^^
+- `f(x) = 3x^2 + 5x - 2` is interpreted as `f(x) = 3 * x^2 + 5 * x - 2`.
+- `g(x) = 2(3x - 4)` is interpreted as `g(x) = 2 * (3x - 4)`.
 
 This allows you to create and write functions in a concise way, removing the need to explicitly use multiplication symbols.
 
@@ -125,6 +128,7 @@ Example:
     pricePerUnit = 20perItem;  # 20 * perItem
 
 In these examples:
+^^^^^^^^^^^^^^^^^^^^
 - `totalCost = 10items` is interpreted as `totalCost = 10 * items`.
 - `pricePerUnit = 20perItem` is interpreted as `pricePerUnit = 20 * perItem`.
 

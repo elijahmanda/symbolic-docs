@@ -23,10 +23,13 @@ Features of Symbolic Language:
 
    sections/syntax
    sections/datatypes
-   sections/assignments
+   sections/numerical_expressions
+   sections/operators
    sections/control_flow
+   sections/assignments
    sections/functions
    sections/classes
+   sections/incontext
    sections/modules
    sections/error_handling
    sections/examples

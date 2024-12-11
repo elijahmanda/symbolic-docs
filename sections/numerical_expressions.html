@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Numerical Expressions and Implied Multiplication in Symbolic</title>
+    
+          <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="../_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="../_static/theme-vendors.js"></script> -->
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="next" title="Operators in Symbolic" href="operators.html" />
+  <link rel="prev" title="Data Types" href="datatypes.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../index.html" class="home-link">
+    
+      <span class="site-name">Symbolic</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#welcome-to-symbolic-language-s-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="syntax.html" class="reference internal ">Basic Syntax</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="datatypes.html" class="reference internal ">Data Types</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Numerical Expressions and Implied Multiplication in Symbolic</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#numerical-suffixes" class="reference internal">Numerical Suffixes</a></li>
+                
+                  <li class="toctree-l2"><a href="#common-suffixes" class="reference internal">Common Suffixes</a></li>
+                
+                  <li class="toctree-l2"><a href="#implied-multiplication" class="reference internal">Implied Multiplication</a></li>
+                
+                  <li class="toctree-l2"><a href="#implied-multiplication-rules" class="reference internal">Implied Multiplication Rules</a></li>
+                
+                  <li class="toctree-l2"><a href="#benefits-of-implied-multiplication" class="reference internal">Benefits of Implied Multiplication</a></li>
+                
+                  <li class="toctree-l2"><a href="#implied-multiplication-in-algebraic-expressions" class="reference internal">Implied Multiplication in Algebraic Expressions</a></li>
+                
+                  <li class="toctree-l2"><a href="#examples-of-algebraic-expressions" class="reference internal">Examples of Algebraic Expressions</a></li>
+                
+                  <li class="toctree-l2"><a href="#implied-multiplication-in-functions-and-constants" class="reference internal">Implied Multiplication in Functions and Constants</a></li>
+                
+                  <li class="toctree-l2"><a href="#implied-multiplication-and-numbers-followed-by-names" class="reference internal">Implied Multiplication and Numbers Followed by Names</a></li>
+                
+                  <li class="toctree-l2"><a href="#summary-of-numerical-and-implied-multiplication-features" class="reference internal">Summary of Numerical and Implied Multiplication Features</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="operators.html" class="reference internal ">Operators in Symbolic</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="control_flow.html" class="reference internal ">Control Flow</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="assignments.html" class="reference internal ">Assignments</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="functions.html" class="reference internal ">Functions</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="classes.html" class="reference internal ">Classes and Objects</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="incontext.html" class="reference internal ">The in context Construct</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="modules.html" class="reference internal ">Modules and Imports</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="error_handling.html" class="reference internal ">Error Handling</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="examples.html" class="reference internal ">Examples</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="contributing.html" class="reference internal ">Contributing</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+    <li>Numerical Expressions and Implied Multiplication in Symbolic</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="datatypes.html"
+       title="previous chapter">← Data Types</a>
+  </li>
+  <li class="next">
+    <a href="operators.html"
+       title="next chapter">Operators in Symbolic →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="numerical-expressions-and-implied-multiplication-in-symbolic">
+<h1>Numerical Expressions and Implied Multiplication in Symbolic<a class="headerlink" href="#numerical-expressions-and-implied-multiplication-in-symbolic" title="Link to this heading"></a></h1>
+<p>Symbolic offers an intuitive way to work with numbers and mathematical expressions. It simplifies both large numbers with suffixes and mathematical operations with implied multiplication. These features make writing mathematical expressions more natural, readable, and efficient.</p>
+<section id="numerical-suffixes">
+<h2>Numerical Suffixes<a class="headerlink" href="#numerical-suffixes" title="Link to this heading"></a></h2>
+<p>Symbolic allows the use of suffixes such as <cite>k</cite> (thousand), <cite>M</cite> (million), and other common numeric abbreviations to express large numbers more compactly. These suffixes scale the number accordingly.</p>
+</section>
+<section id="common-suffixes">
+<h2>Common Suffixes<a class="headerlink" href="#common-suffixes" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>k</cite>: Represents 1,000.</p></li>
+<li><p><cite>M</cite>: Represents 1,000,000.</p></li>
+<li><p><cite>B</cite>: Represents 1,000,000,000 (billion).</p></li>
+</ul>
+<p>This functionality makes it easier to express large numbers without manually writing out all the zeros. The suffixes are automatically interpreted by the Symbolic interpreter, which scales the number for you.</p>
+<p>Example:
+.. code-block:: symbolic</p>
+<blockquote>
+<div><p># Numeric shorthand with suffixes
+population = 7.8M;  # 7.8 million people
+distance = 2k;      # 2,000 meters
+budget = 1.5B;      # 1.5 billion dollars</p>
+</div></blockquote>
+<p>In these examples:
+- <cite>population</cite> will evaluate to 7,800,000.
+- <cite>distance</cite> will evaluate to 2,000.
+- <cite>budget</cite> will evaluate to 1,500,000,000.</p>
+<p>These suffixes provide convenience when working with large datasets, financial figures, or statistical values.</p>
+</section>
+<section id="implied-multiplication">
+<h2>Implied Multiplication<a class="headerlink" href="#implied-multiplication" title="Link to this heading"></a></h2>
+<p>One of the core features of Symbolic is the ability to infer multiplication automatically between numbers, variables, and expressions. This reduces the need for explicit operators, making mathematical notation more concise and closer to traditional mathematical writing.</p>
+</section>
+<section id="implied-multiplication-rules">
+<h2>Implied Multiplication Rules<a class="headerlink" href="#implied-multiplication-rules" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Number and Variable</strong>: When a number is immediately followed by a variable, it implies multiplication.</dt><dd><ul>
+<li><p>Example: <cite>2PI</cite> is interpreted as <cite>2 * PI</cite> (where <cite>PI</cite> is a constant representing π).</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Number and Parenthesis</strong>: When a number is immediately followed by an expression in parentheses, it implies multiplication.</dt><dd><ul>
+<li><p>Example: <cite>7(3x - 8)</cite> is interpreted as <cite>7 * (3x - 8)</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Number and Name</strong>: When a number is followed by a name (which could be a variable or a symbol), it implies multiplication.</dt><dd><ul>
+<li><p>Example: <cite>23oranges</cite> is interpreted as <cite>23 * oranges</cite> (assuming <cite>oranges</cite> is a variable).</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>This feature helps in reducing visual clutter and allows you to express algebraic equations in a more readable way.</p>
+<p>Example:
+.. code-block:: symbolic</p>
+<blockquote>
+<div><p># Implied multiplication examples
+result = 2PI + 3x^2 + 9;    # 2 * PI + 3 * x^2 + 9
+area = 7(3x - 8);            # 7 * (3x - 8)
+fruitCount = 23oranges;      # 23 * oranges</p>
+</div></blockquote>
+<p>In the first example, the expression <cite>2PI + 3x^2 + 9</cite> is equivalent to <cite>2 * PI + 3 * x^2 + 9</cite>. The second expression, <cite>7(3x - 8)</cite>, simplifies to <cite>7 * (3x - 8)</cite>. Finally, <cite>23oranges</cite> is interpreted as <cite>23 * oranges</cite>, implying that <cite>oranges</cite> is a variable representing a count or quantity.</p>
+</section>
+<section id="benefits-of-implied-multiplication">
+<h2>Benefits of Implied Multiplication<a class="headerlink" href="#benefits-of-implied-multiplication" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Simplified Syntax</strong>: You no longer need to write <cite>*</cite> every time you multiply numbers and variables, making expressions shorter and easier to understand.</p></li>
+<li><p><strong>Closer to Mathematical Notation</strong>: The implied multiplication syntax follows the conventions commonly used in algebra and calculus, allowing you to write equations more like you would on paper.</p></li>
+<li><p><strong>Enhanced Readability</strong>: The removal of extra multiplication symbols makes the expressions clearer and more intuitive, especially when working with complex formulas.</p></li>
+</ul>
+</section>
+<section id="implied-multiplication-in-algebraic-expressions">
+<h2>Implied Multiplication in Algebraic Expressions<a class="headerlink" href="#implied-multiplication-in-algebraic-expressions" title="Link to this heading"></a></h2>
+<p>In algebraic expressions, implied multiplication allows you to easily combine terms, whether they’re simple constants or more complex variables.</p>
+</section>
+<section id="examples-of-algebraic-expressions">
+<h2>Examples of Algebraic Expressions<a class="headerlink" href="#examples-of-algebraic-expressions" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>3x^2 + 9</cite> means <cite>3 * x^2 + 9</cite>.</p></li>
+<li><p><cite>2y(3x + 5)</cite> means <cite>2 * y * (3x + 5)</cite>.</p></li>
+<li><p><cite>5a^2b</cite> means <cite>5 * a^2 * b</cite>.</p></li>
+</ul>
+<p>Example:
+.. code-block:: symbolic</p>
+<blockquote>
+<div><p># Algebraic expression examples
+expression1 = 3x^2 + 9;        # 3 * x^2 + 9
+expression2 = 2y(3x + 5);      # 2 * y * (3x + 5)
+expression3 = 5a^2b;           # 5 * a^2 * b</p>
+</div></blockquote>
+<p>In these examples:
+- <cite>expression1</cite> evaluates to <cite>3 * x^2 + 9</cite>.
+- <cite>expression2</cite> evaluates to <cite>2 * y * (3x + 5)</cite>.
+- <cite>expression3</cite> evaluates to <cite>5 * a^2 * b</cite>.</p>
+</section>
+<section id="implied-multiplication-in-functions-and-constants">
+<h2>Implied Multiplication in Functions and Constants<a class="headerlink" href="#implied-multiplication-in-functions-and-constants" title="Link to this heading"></a></h2>
+<p>Implied multiplication can also be applied when working with functions and constants in Symbolic. This feature ensures that even function calls and constants can be written in a more natural, intuitive way.</p>
+<p>Example:
+.. code-block:: symbolic</p>
+<blockquote>
+<div><p># Function and constant examples
+f = 3x^2 + 5x - 2;         # f(x) = 3 * x^2 + 5 * x - 2
+g = 2(3x - 4);             # g(x) = 2 * (3x - 4)</p>
+</div></blockquote>
+<p>Here:
+- <cite>f = 3x^2 + 5x - 2</cite> is interpreted as <cite>f(x) = 3 * x^2 + 5 * x - 2</cite>.
+- <cite>g = 2(3x - 4)</cite> is interpreted as <cite>g(x) = 2 * (3x - 4)</cite>.</p>
+<p>This allows you to create and write functions in a concise way, removing the need to explicitly use multiplication symbols.</p>
+</section>
+<section id="implied-multiplication-and-numbers-followed-by-names">
+<h2>Implied Multiplication and Numbers Followed by Names<a class="headerlink" href="#implied-multiplication-and-numbers-followed-by-names" title="Link to this heading"></a></h2>
+<p>When a number is immediately followed by a name or a variable, Symbolic interprets this as multiplication. This is a powerful feature for creating formulas where numbers are dynamically multiplied by variables or constants.</p>
+<p>Example:
+.. code-block:: symbolic</p>
+<blockquote>
+<div><p># Numbers followed by names
+totalCost = 10items;    # 10 * items
+pricePerUnit = 20perItem;  # 20 * perItem</p>
+</div></blockquote>
+<p>In these examples:
+- <cite>totalCost = 10items</cite> is interpreted as <cite>totalCost = 10 * items</cite>.
+- <cite>pricePerUnit = 20perItem</cite> is interpreted as <cite>pricePerUnit = 20 * perItem</cite>.</p>
+<p>This feature helps when dealing with quantities, units, or even more complex formulas, and enables more flexible, human-readable code.</p>
+</section>
+<section id="summary-of-numerical-and-implied-multiplication-features">
+<h2>Summary of Numerical and Implied Multiplication Features<a class="headerlink" href="#summary-of-numerical-and-implied-multiplication-features" title="Link to this heading"></a></h2>
+<p>Symbolic simplifies the writing and evaluation of numerical expressions by supporting:
+- <strong>Numerical suffixes</strong> for representing large numbers like <cite>k</cite> for thousands and <cite>M</cite> for millions.
+- <strong>Implied multiplication</strong> in expressions involving numbers, variables, and parentheses, reducing the need for explicit multiplication operators.
+- <strong>Concise, natural mathematical expressions</strong> that resemble traditional algebraic notation.
+- <strong>Flexibility</strong> in defining and using formulas, constants, and functions.</p>
+<p>These features not only make writing code more efficient but also bring Symbolic closer to real-world mathematical writing, making it more intuitive for those familiar with mathematical syntax.</p>
+<p>By utilizing these features, you can write expressions, functions, and algorithms with ease, allowing for more readable and mathematically aligned code.</p>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="datatypes.html"
+       title="previous chapter">← Data Types</a>
+  </li>
+  <li class="next">
+    <a href="operators.html"
+       title="next chapter">Operators in Symbolic →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2024, Elijah Manda.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.1.3 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

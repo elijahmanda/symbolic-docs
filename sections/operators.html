@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Operators in Symbolic</title>
+    
+          <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="../_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="../_static/theme-vendors.js"></script> -->
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="next" title="Control Flow" href="control_flow.html" />
+  <link rel="prev" title="Numerical Expressions and Implied Multiplication in Symbolic" href="numerical_expressions.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../index.html" class="home-link">
+    
+      <span class="site-name">Symbolic</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#welcome-to-symbolic-language-s-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="syntax.html" class="reference internal ">Basic Syntax</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="datatypes.html" class="reference internal ">Data Types</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="numerical_expressions.html" class="reference internal ">Numerical Expressions and Implied Multiplication in Symbolic</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Operators in Symbolic</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#assignment-operators" class="reference internal">Assignment Operators</a></li>
+                
+                  <li class="toctree-l2"><a href="#binary-operators" class="reference internal">Binary Operators</a></li>
+                
+                  <li class="toctree-l2"><a href="#absolute-value" class="reference internal">Absolute Value</a></li>
+                
+                  <li class="toctree-l2"><a href="#prefix-operators" class="reference internal">Prefix Operators</a></li>
+                
+                  <li class="toctree-l2"><a href="#postfix-operators" class="reference internal">Postfix Operators</a></li>
+                
+                  <li class="toctree-l2"><a href="#equality-and-comparison-operators" class="reference internal">Equality and Comparison Operators</a></li>
+                
+                  <li class="toctree-l2"><a href="#operator-summary" class="reference internal">Operator Summary</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="control_flow.html" class="reference internal ">Control Flow</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="assignments.html" class="reference internal ">Assignments</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="functions.html" class="reference internal ">Functions</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="classes.html" class="reference internal ">Classes and Objects</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="incontext.html" class="reference internal ">The in context Construct</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="modules.html" class="reference internal ">Modules and Imports</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="error_handling.html" class="reference internal ">Error Handling</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="examples.html" class="reference internal ">Examples</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="contributing.html" class="reference internal ">Contributing</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+    <li>Operators in Symbolic</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="numerical_expressions.html"
+       title="previous chapter">← Numerical Expressions and Implied Multiplication in Symbolic</a>
+  </li>
+  <li class="next">
+    <a href="control_flow.html"
+       title="next chapter">Control Flow →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="operators-in-symbolic">
+<h1>Operators in Symbolic<a class="headerlink" href="#operators-in-symbolic" title="Link to this heading"></a></h1>
+<p>Symbolic provides a variety of operators to support arithmetic, assignment, comparison, and other operations. These operators are grouped into categories for clarity and ease of use.</p>
+<section id="assignment-operators">
+<h2>Assignment Operators<a class="headerlink" href="#assignment-operators" title="Link to this heading"></a></h2>
+<p>Assignment operators assign values to variables. Symbolic supports the following assignment styles:</p>
+<ul class="simple">
+<li><p><strong>`=`</strong>: Standard assignment.</p></li>
+<li><p><strong>`:=`</strong>: Assignment with initialization.</p></li>
+<li><p><strong>`&lt;-`</strong>: Left arrow assignment.</p></li>
+<li><p><strong>`+=`</strong>: Add and assign.</p></li>
+<li><p><strong>`-=`</strong>: Subtract and assign.</p></li>
+<li><p><strong>`*=`</strong> or <strong>`×=`</strong>: Multiply and assign.</p></li>
+<li><p><strong>`/=`</strong> or <strong>`÷=`</strong>: Divide and assign.</p></li>
+<li><p><strong>`%=`</strong>: Modulus and assign.</p></li>
+<li><p><strong>`|=`</strong>: Bitwise OR and assign.</p></li>
+<li><p><strong>`||=`</strong>: Logical OR and assign.</p></li>
+<li><p><strong>`//=`</strong>: Floor divide and assign.</p></li>
+<li><p><strong>`^=`</strong>: Exponentiate and assign.</p></li>
+</ul>
+<p>Examples:
+.. code-block:: symbolic</p>
+<blockquote>
+<div><p>x = 10;       # Standard assignment
+y += 5;       # Increment y by 5
+total /= 2;   # Divide total by 2 and assign</p>
+</div></blockquote>
+</section>
+<section id="binary-operators">
+<h2>Binary Operators<a class="headerlink" href="#binary-operators" title="Link to this heading"></a></h2>
+<p>Binary operators perform operations on two operands. These include arithmetic, logical, and bitwise operators.</p>
+<p>Supported Binary Operators:
+- Arithmetic: <strong>`+`</strong>, <strong>`-`</strong>, <strong>`*`</strong>, <strong>`/`</strong>, <strong>`//`</strong>, <strong>`÷`</strong>, <strong>`×`</strong>, <strong>`%`</strong>
+- Logical: <strong>`||`</strong>, <strong>`&amp;&amp;`</strong>
+- Bitwise: <strong>`|`</strong>, <strong>`&amp;`</strong>, <strong>`^`</strong>
+- Exponentiation: <strong>`**`</strong>
+- Comparison: <strong>`!=`</strong>, <strong>`&lt;`</strong>, <strong>`&gt;`</strong>
+- Range and Slicing: <strong>`..`</strong></p>
+<p>Examples:
+.. code-block:: symbolic</p>
+<blockquote>
+<div><p>sum = a + b;         # Addition
+range = 1..10;       # Range from 1 to 10
+slice = list[2..5];  # Slice from index 2 to 5</p>
+</div></blockquote>
+</section>
+<section id="absolute-value">
+<h2>Absolute Value<a class="headerlink" href="#absolute-value" title="Link to this heading"></a></h2>
+<p>The absolute value operator <cite>|expression|</cite> returns the magnitude of a number, ignoring its sign.</p>
+<p>Examples:
+.. code-block:: symbolic</p>
+<blockquote>
+<div><p>abs_value = <a href="#id1"><span class="problematic" id="id2">|x|</span></a>;   # Absolute value of x
+print(<a href="#id3"><span class="problematic" id="id4">|-8|</span></a>);       # Output: 8</p>
+</div></blockquote>
+</section>
+<section id="prefix-operators">
+<h2>Prefix Operators<a class="headerlink" href="#prefix-operators" title="Link to this heading"></a></h2>
+<p>Prefix operators work on a single operand placed immediately after the operator.</p>
+<p>Supported Prefix Operators:
+- Arithmetic: <strong>`+`</strong>, <strong>`-`</strong>
+- Logical: <strong>`!`</strong>
+- Bitwise: <strong>`~`</strong>
+- Ranges: <strong>`..`</strong>
+- Mixed: <strong>`+/-`</strong> (plus or minus)</p>
+<p>Examples:
+.. code-block:: symbolic</p>
+<blockquote>
+<div><p>value = -x;    # Negation
+range = ..5;   # Range from 0 to 5
+not_flag = !true;  # Logical NOT</p>
+</div></blockquote>
+</section>
+<section id="postfix-operators">
+<h2>Postfix Operators<a class="headerlink" href="#postfix-operators" title="Link to this heading"></a></h2>
+<p>Postfix operators operate on a single operand placed before the operator.</p>
+<p>Supported Postfix Operators:
+- Logical: <strong>`!`</strong>
+- Ranges: <strong>`..`</strong>
+- Special: <strong>`°`</strong>, <strong>`’`</strong></p>
+<p>Examples:
+.. code-block:: symbolic</p>
+<blockquote>
+<div><p>angle = 45°;   # Represents 45 degrees
+complement = x’;   # Complement of x</p>
+</div></blockquote>
+</section>
+<section id="equality-and-comparison-operators">
+<h2>Equality and Comparison Operators<a class="headerlink" href="#equality-and-comparison-operators" title="Link to this heading"></a></h2>
+<p>Equality and comparison operators are used to compare two operands.</p>
+<p>Supported Comparison Operators:
+- <strong>`&lt;`</strong>: Less than
+- <strong>`&gt;`</strong>: Greater than
+- <strong>`&lt;=`</strong>: Less than or equal to
+- <strong>`&gt;=`</strong>: Greater than or equal to
+- <strong>`==`</strong>: Equal to
+- <strong>`!=`</strong>: Not equal to</p>
+<p>Examples:
+.. code-block:: symbolic</p>
+<blockquote>
+<div><dl class="simple">
+<dt>if x &lt; y {</dt><dd><p>print(“x is less than y”);</p>
+</dd>
+</dl>
+<p>}
+elif x == y {</p>
+<blockquote>
+<div><p>print(“x is equal to y”);</p>
+</div></blockquote>
+<dl class="simple">
+<dt>} else {</dt><dd><p>print(“x is greater than y”);</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+</section>
+<section id="operator-summary">
+<h2>Operator Summary<a class="headerlink" href="#operator-summary" title="Link to this heading"></a></h2>
+<p>Symbolic’s operators provide a clean and intuitive syntax for mathematical, logical, and algorithmic expressions, catering to a wide range of applications.</p>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="numerical_expressions.html"
+       title="previous chapter">← Numerical Expressions and Implied Multiplication in Symbolic</a>
+  </li>
+  <li class="next">
+    <a href="control_flow.html"
+       title="next chapter">Control Flow →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2024, Elijah Manda.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.1.3 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

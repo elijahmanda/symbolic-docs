@@ -13,10 +13,11 @@ Common Suffixes
 - `k`: Represents 1,000.
 - `M`: Represents 1,000,000.
 - `B`: Represents 1,000,000,000 (billion).
-
+All standard sufffixes are supported.
 This functionality makes it easier to express large numbers without manually writing out all the zeros. The suffixes are automatically interpreted by the Symbolic interpreter, which scales the number for you.
 
 Example:
+^^^^^^^^^^^
 .. code-block:: symbolic
 
     # Numeric shorthand with suffixes
@@ -49,6 +50,7 @@ Implied Multiplication Rules
 This feature helps in reducing visual clutter and allows you to express algebraic equations in a more readable way.
 
 Example:
+^^^^^^^^^^
 .. code-block:: symbolic
 
     # Implied multiplication examples
@@ -77,6 +79,7 @@ Examples of Algebraic Expressions
 - `5a^2b` means `5 * a^2 * b`.
 
 Example:
+^^^^^^^^^^
 .. code-block:: symbolic
 
     # Algebraic expression examples
@@ -95,6 +98,7 @@ Implied Multiplication in Functions and Constants
 Implied multiplication can also be applied when working with functions and constants in Symbolic. This feature ensures that even function calls and constants can be written in a more natural, intuitive way.
 
 Example:
+^^^^^^^^^^^^
 .. code-block:: symbolic
 
     # Function and constant examples
@@ -113,6 +117,7 @@ Implied Multiplication and Numbers Followed by Names
 When a number is immediately followed by a name or a variable, Symbolic interprets this as multiplication. This is a powerful feature for creating formulas where numbers are dynamically multiplied by variables or constants.
 
 Example:
+^^^^^^^^^^
 .. code-block:: symbolic
 
     # Numbers followed by names

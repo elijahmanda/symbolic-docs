@@ -4,7 +4,7 @@ The `in context` Construct
 The `in context` construct in Symbolic provides a concise and intuitive way to execute a series of operations on an object or owner. This construct allows you to check for method or attribute names within the "context owner" (the specified object), and if the names are not found in the context owner, they are resolved from the outer scope.
 
 Overview
---------
+----------
 
 The syntax for the `in context` construct is as follows:
 
@@ -13,6 +13,8 @@ The syntax for the `in context` construct is as follows:
     in context <owner> {
         <operation_1>();
         <operation_2>();
+        <name_1>;
+        <name_2>;
         ...
     }
 
@@ -36,6 +38,7 @@ In this example, operations are performed on the `matrix` object:
     }
 
 Explanation:
+^^^^^^^^^^^^^
 - The methods `transpose()` and `normalize()` are executed on the `matrix` object. 
 - This is equivalent to the following:
 
@@ -60,6 +63,7 @@ If a name is not found in the context owner, it is resolved from the outer scope
     }
 
 Explanation:
+^^^^^^^^^^^^^^
 - The `normalize()` method is executed on `matrix`.
 - The variable `epsilon` is not part of the `matrix` context, so it is resolved from the outer scope.
 
@@ -82,6 +86,7 @@ Nested `in context` Constructs
     }
 
 Explanation:
+^^^^^^^^^^^^^^^
 - The `transpose()` method is executed on `matrix`.
 - Within the nested context, the `normalize()` method is executed on `vector`.
 

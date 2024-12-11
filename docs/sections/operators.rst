@@ -22,6 +22,7 @@ Assignment operators assign values to variables. Symbolic supports the following
 - **`^=`**: Exponentiate and assign.
 
 Examples:
+^^^^^^^^^^^^
 .. code-block:: symbolic
 
     x = 10;       # Standard assignment
@@ -29,7 +30,7 @@ Examples:
     total /= 2;   # Divide total by 2 and assign
 
 Binary Operators
-----------------
+------------------
 
 Binary operators perform operations on two operands. These include arithmetic, logical, and bitwise operators.
 
@@ -42,6 +43,7 @@ Supported Binary Operators:
 - Range and Slicing: **`..`**
 
 Examples:
+^^^^^^^^^^^
 .. code-block:: symbolic
 
     sum = a + b;         # Addition
@@ -54,6 +56,7 @@ Absolute Value
 The absolute value operator `|expression|` returns the magnitude of a number, ignoring its sign.
 
 Examples:
+^^^^^^^^^^^^^
 .. code-block:: symbolic
 
     abs_value = |x|;   # Absolute value of x
@@ -72,6 +75,7 @@ Supported Prefix Operators:
 - Mixed: **`+/-`** (plus or minus)
 
 Examples:
+^^^^^^^^^^^^^
 .. code-block:: symbolic
 
     value = -x;    # Negation
@@ -89,6 +93,7 @@ Supported Postfix Operators:
 - Special: **`°`**, **`'`**
 
 Examples:
+^^^^^^^^^^^^
 .. code-block:: symbolic
 
     angle = 45°;   # Represents 45 degrees
@@ -108,6 +113,7 @@ Supported Comparison Operators:
 - **`!=`**: Not equal to
 
 Examples:
+^^^^^^^^^^^^^
 .. code-block:: symbolic
 
     if x < y {

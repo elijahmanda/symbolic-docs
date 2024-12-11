@@ -101,7 +101,17 @@
             
               <ul>
                 
-                  <li class="toctree-l2"><a href="#variables-and-assignments" class="reference internal">Variables and Assignments</a></li>
+                  <li class="toctree-l2"><a href="#normal-single-assignment" class="reference internal">Normal Single Assignment</a></li>
+                
+                  <li class="toctree-l2"><a href="#single-value-assignment" class="reference internal">Single Value Assignment</a></li>
+                
+                  <li class="toctree-l2"><a href="#unpack-normal" class="reference internal">Unpack Normal</a></li>
+                
+                  <li class="toctree-l2"><a href="#unpack-asterisk-no-name" class="reference internal">Unpack Asterisk (No Name)</a></li>
+                
+                  <li class="toctree-l2"><a href="#unpack-asterisk-with-name" class="reference internal">Unpack Asterisk (With Name)</a></li>
+                
+                  <li class="toctree-l2"><a href="#example-chained-assignment-and-unpacking" class="reference internal">Example: Chained Assignment and Unpacking</a></li>
                 
               </ul>
             
@@ -204,47 +214,77 @@
             
   <section id="assignments">
 <h1>Assignments<a class="headerlink" href="#assignments" title="Link to this heading"></a></h1>
-<p>Symbolic supports multiple assignment styles, unpacking, and lazy evaluation.</p>
-<section id="variables-and-assignments">
-<h2>Variables and Assignments<a class="headerlink" href="#variables-and-assignments" title="Link to this heading"></a></h2>
-<section id="normal-assignment">
-<h3>Normal Assignment<a class="headerlink" href="#normal-assignment" title="Link to this heading"></a></h3>
-<p>Assign values to variables using the <cite>=</cite> operator:</p>
-<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">20</span><span class="o">;</span>
+<p>Symbolic supports various forms of assignment, including normal assignments, chained assignments, and unpacking of collections. This allows for flexible variable initialization and management.</p>
+<section id="normal-single-assignment">
+<h2>Normal Single Assignment<a class="headerlink" href="#normal-single-assignment" title="Link to this heading"></a></h2>
+<p>Normal assignment is used to assign a value to a variable.</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+<span class="n">print</span><span class="o">(</span><span class="s2">&quot;x =&quot;</span><span class="o">,</span> <span class="n">x</span><span class="o">);</span>
+</pre></div>
+</div>
+</section>
+<section id="single-value-assignment">
+<h2>Single Value Assignment<a class="headerlink" href="#single-value-assignment" title="Link to this heading"></a></h2>
+<p>You can assign a single value to multiple variables in one statement, also known as chained assignment.</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+<span class="n">print</span><span class="o">(</span><span class="s2">&quot;x = y =&quot;</span><span class="o">,</span> <span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">);</span>
+</pre></div>
+</div>
+</section>
+<section id="unpack-normal">
+<h2>Unpack Normal<a class="headerlink" href="#unpack-normal" title="Link to this heading"></a></h2>
+<p>Unpacking allows you to assign values from collections (like lists) to variables.</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">)</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">];</span>
 <span class="n">print</span><span class="o">(</span><span class="s2">&quot;x =&quot;</span><span class="o">,</span> <span class="n">x</span><span class="o">,</span> <span class="s2">&quot;y =&quot;</span><span class="o">,</span> <span class="n">y</span><span class="o">);</span>
 </pre></div>
 </div>
 </section>
-<section id="lazy-assignment">
-<h3>Lazy Assignment<a class="headerlink" href="#lazy-assignment" title="Link to this heading"></a></h3>
-<p>Lazy assignment (<cite>:=</cite>) delays evaluation until the variable is accessed:</p>
-<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">:=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">10</span><span class="o">;</span>
-<span class="n">print</span><span class="o">(</span><span class="s2">&quot;x =&quot;</span><span class="o">,</span> <span class="n">x</span><span class="o">);</span>  <span class="c1"># Evaluates 5 + 10 here</span>
+<section id="unpack-asterisk-no-name">
+<h2>Unpack Asterisk (No Name)<a class="headerlink" href="#unpack-asterisk-no-name" title="Link to this heading"></a></h2>
+<p>The asterisk (<cite>*</cite>) can be used in unpacking to ignore specific elements. This is useful when you want to capture the remaining elements of a collection without naming them.</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="o">(*,</span> <span class="n">y</span><span class="o">)</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">];</span>
+<span class="n">print</span><span class="o">(</span><span class="s2">&quot;y =&quot;</span><span class="o">,</span> <span class="n">y</span><span class="o">);</span>
 </pre></div>
 </div>
 </section>
-<section id="multiple-assignments">
-<h3>Multiple Assignments<a class="headerlink" href="#multiple-assignments" title="Link to this heading"></a></h3>
-<p>Assign the same value to multiple variables:</p>
-<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">=</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">42</span><span class="o">;</span>
-<span class="n">print</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">z</span><span class="o">);</span>
+<section id="unpack-asterisk-with-name">
+<h2>Unpack Asterisk (With Name)<a class="headerlink" href="#unpack-asterisk-with-name" title="Link to this heading"></a></h2>
+<p>You can also use the asterisk (<cite>*</cite>) to collect the remaining items into a variable, allowing you to capture multiple values at once.</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="o">(*</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">)</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">];</span>
+<span class="n">print</span><span class="o">(</span><span class="s2">&quot;x =&quot;</span><span class="o">,</span> <span class="n">x</span><span class="o">,</span> <span class="s2">&quot;y =&quot;</span><span class="o">,</span> <span class="n">y</span><span class="o">);</span>
 </pre></div>
 </div>
+<section id="use-cases">
+<h3>Use Cases<a class="headerlink" href="#use-cases" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Multiple Assignments</strong>
+Use chained assignments to efficiently assign the same value to multiple variables.</p></li>
+<li><p><strong>Unpacking</strong>
+Unpacking is ideal for extracting elements from lists or tuples into individual variables.</p></li>
+<li><p><strong>Ignoring Elements</strong>
+Use the asterisk to discard unwanted values during unpacking while still capturing the ones you need.</p></li>
+</ol>
 </section>
-<section id="unpacking">
-<h3>Unpacking<a class="headerlink" href="#unpacking" title="Link to this heading"></a></h3>
-<p>Unpack values from arrays, tuples, or similar structures into individual variables:</p>
-<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">,</span> <span class="n">c</span><span class="o">)</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">];</span>
-<span class="n">print</span><span class="o">(</span><span class="s2">&quot;a =&quot;</span><span class="o">,</span> <span class="n">a</span><span class="o">,</span> <span class="s2">&quot;b =&quot;</span><span class="o">,</span> <span class="n">b</span><span class="o">,</span> <span class="s2">&quot;c =&quot;</span><span class="o">,</span> <span class="n">c</span><span class="o">);</span>
-</pre></div>
-</div>
-<p>Unpack the head and tail of a list-like structure:</p>
-<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="o">(*</span><span class="n">head</span><span class="o">,</span> <span class="n">tail</span><span class="o">)</span> <span class="o">=</span> <span class="o">[</span><span class="mi">10</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">40</span><span class="o">];</span>
-<span class="n">print</span><span class="o">(</span><span class="s2">&quot;head =&quot;</span><span class="o">,</span> <span class="n">head</span><span class="o">,</span> <span class="s2">&quot;tail =&quot;</span><span class="o">,</span> <span class="n">tail</span><span class="o">);</span>
-</pre></div>
-</div>
 </section>
+<section id="example-chained-assignment-and-unpacking">
+<h2>Example: Chained Assignment and Unpacking<a class="headerlink" href="#example-chained-assignment-and-unpacking" title="Link to this heading"></a></h2>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="c1"># Chained assignment</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+<span class="n">print</span><span class="o">(</span><span class="s2">&quot;a =&quot;</span><span class="o">,</span> <span class="n">a</span><span class="o">,</span> <span class="s2">&quot;b =&quot;</span><span class="o">,</span> <span class="n">b</span><span class="o">);</span>
+
+<span class="c1"># Unpacking a list</span>
+<span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">z</span><span class="o">)</span> <span class="o">=</span> <span class="o">[</span><span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">];</span>
+<span class="n">print</span><span class="o">(</span><span class="s2">&quot;x =&quot;</span><span class="o">,</span> <span class="n">x</span><span class="o">,</span> <span class="s2">&quot;y =&quot;</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="s2">&quot;z =&quot;</span><span class="o">,</span> <span class="n">z</span><span class="o">);</span>
+
+<span class="c1"># Using asterisk to ignore first two elements</span>
+<span class="o">(*</span><span class="n">_</span><span class="o">,</span> <span class="n">z</span><span class="o">)</span> <span class="o">=</span> <span class="o">[</span><span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">];</span>
+<span class="n">print</span><span class="o">(</span><span class="s2">&quot;z =&quot;</span><span class="o">,</span> <span class="n">z</span><span class="o">);</span>
+
+<span class="c1"># Using asterisk to collect remaining items</span>
+<span class="o">(*</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">)</span> <span class="o">=</span> <span class="o">[</span><span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">];</span>
+<span class="n">print</span><span class="o">(</span><span class="s2">&quot;x =&quot;</span><span class="o">,</span> <span class="n">x</span><span class="o">,</span> <span class="s2">&quot;y =&quot;</span><span class="o">,</span> <span class="n">y</span><span class="o">);</span>
+</pre></div>
+</div>
 </section>
 </section>
 

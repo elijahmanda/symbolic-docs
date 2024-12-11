@@ -210,7 +210,7 @@
 <li><p><strong>Blocks</strong>: Code blocks, such as the body of functions, loops, and conditionals, are enclosed in curly braces (<cite>{}</cite>). These braces define the scope of the block, grouping related statements together.</p></li>
 <li><p><strong>Comments</strong>:
 - <strong>Single-line comments</strong>: Use the hash symbol (<cite>#</cite>) to start a comment on a single line. Everything following the hash symbol on that line will be ignored by the interpreter. This is useful for brief explanations or notes within your code.
-- <strong>Multi-line comments</strong>: Symbolic does not yet support multi-line comments. However, you can achieve multi-line commenting by placing a hash symbol (<cite>#</cite>) at the beginning of each line for comments that span multiple lines.</p></li>
+- <strong>Multi-line comments</strong>: Symbolic supports multi-line comments using the /* <a href="#id1"><span class="problematic" id="id2">*</span></a>/ syntax. Any text enclosed within these delimiters will be treated as a comment, allowing for comments that span multiple lines.</p></li>
 </ul>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
@@ -223,6 +223,11 @@
 
 <span class="c1"># Function call</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">some_function</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>  <span class="c1"># Calling a function with argument x</span>
+<span class="cm">/*</span>
+<span class="cm">    This is a multi-line comment</span>
+<span class="cm">    in Symbolic.</span>
+<span class="cm">    It can span multiple lines.</span>
+<span class="cm">*/</span>
 </pre></div>
 </div>
 <p>In this example, you can see how single-line comments are used for clarity. Every statement ends with a semicolon (<cite>;</cite>), and blocks (though not shown in this example) would be enclosed in curly braces (<cite>{}</cite>).</p>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Modules and Imports</title>
+    
+          <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="../_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="../_static/theme-vendors.js"></script> -->
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="next" title="Error Handling" href="error_handling.html" />
+  <link rel="prev" title="Classes and Objects" href="classes.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../index.html" class="home-link">
+    
+      <span class="site-name">Symbolic</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#wel-to-symbolic-language-s-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="syntax.html" class="reference internal ">Basic Syntax</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="datatypes.html" class="reference internal ">Data Types</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="assignments.html" class="reference internal ">Assignments</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="control_flow.html" class="reference internal ">Control Flow</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="functions.html" class="reference internal ">Functions</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="classes.html" class="reference internal ">Classes and Objects</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Modules and Imports</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#importing-entire-modules" class="reference internal">Importing Entire Modules</a></li>
+                
+                  <li class="toctree-l2"><a href="#importing-specific-items" class="reference internal">Importing Specific Items</a></li>
+                
+                  <li class="toctree-l2"><a href="#importing-with-aliases" class="reference internal">Importing with Aliases</a></li>
+                
+                  <li class="toctree-l2"><a href="#importing-all-contents-from-a-module" class="reference internal">Importing All Contents from a Module</a></li>
+                
+                  <li class="toctree-l2"><a href="#importing-multiple-modules" class="reference internal">Importing Multiple Modules</a></li>
+                
+                  <li class="toctree-l2"><a href="#nested-imports" class="reference internal">Nested Imports</a></li>
+                
+                  <li class="toctree-l2"><a href="#module-aliases-and-conflicts" class="reference internal">Module Aliases and Conflicts</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="error_handling.html" class="reference internal ">Error Handling</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="examples.html" class="reference internal ">Examples</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="contributing.html" class="reference internal ">Contributing</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+    <li>Modules and Imports</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="classes.html"
+       title="previous chapter">← Classes and Objects</a>
+  </li>
+  <li class="next">
+    <a href="error_handling.html"
+       title="next chapter">Error Handling →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="modules-and-imports">
+<h1>Modules and Imports<a class="headerlink" href="#modules-and-imports" title="Link to this heading"></a></h1>
+<p>Symbolic supports modular programming by allowing you to organize code into modules. You can use the <cite>import</cite> statement to bring in functions, classes, constants, and other components from external or internal modules.</p>
+<section id="importing-entire-modules">
+<h2>Importing Entire Modules<a class="headerlink" href="#importing-entire-modules" title="Link to this heading"></a></h2>
+<p>You can import an entire module to access its contents. This is useful for bringing in a set of related functions, classes, or constants.</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="n">math</span><span class="o">;</span>
+
+<span class="n">pi</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">PI</span><span class="o">;</span>
+<span class="n">print</span><span class="o">(</span><span class="s2">&quot;Pi =&quot;</span><span class="o">,</span> <span class="n">pi</span><span class="o">);</span>
+</pre></div>
+</div>
+<p>In this example, the entire <cite>math</cite> module is imported, and its constants and functions are accessed using the <cite>math</cite> prefix.</p>
+</section>
+<section id="importing-specific-items">
+<h2>Importing Specific Items<a class="headerlink" href="#importing-specific-items" title="Link to this heading"></a></h2>
+<p>You can import specific components from a module to avoid unnecessary imports and improve clarity.</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="n">math</span><span class="o">::{</span><span class="n">PI</span><span class="o">,</span> <span class="n">sqrt</span><span class="o">};</span>
+
+<span class="n">print</span><span class="o">(</span><span class="s2">&quot;Pi =&quot;</span><span class="o">,</span> <span class="n">PI</span><span class="o">);</span>
+<span class="n">print</span><span class="o">(</span><span class="s2">&quot;Square root of 16 =&quot;</span><span class="o">,</span> <span class="n">sqrt</span><span class="o">(</span><span class="mi">16</span><span class="o">));</span>
+</pre></div>
+</div>
+<p>Here, only the <cite>PI</cite> constant and the <cite>sqrt</cite> function from the <cite>math</cite> module are imported.</p>
+</section>
+<section id="importing-with-aliases">
+<h2>Importing with Aliases<a class="headerlink" href="#importing-with-aliases" title="Link to this heading"></a></h2>
+<p>Use aliases to rename modules or components during import, making code easier to read or avoiding naming conflicts.</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="n">math</span> <span class="n">as</span> <span class="n">m</span><span class="o">;</span>
+
+<span class="n">print</span><span class="o">(</span><span class="s2">&quot;Pi =&quot;</span><span class="o">,</span> <span class="n">m</span><span class="o">.</span><span class="n">PI</span><span class="o">);</span>
+</pre></div>
+</div>
+<p>In this case, the <cite>math</cite> module is imported with the alias <cite>m</cite>, allowing access to its contents via <cite>m.&lt;component&gt;</cite>.</p>
+</section>
+<section id="importing-all-contents-from-a-module">
+<h2>Importing All Contents from a Module<a class="headerlink" href="#importing-all-contents-from-a-module" title="Link to this heading"></a></h2>
+<p>You can import all elements of a module directly into your current scope, so you don’t need to use the module name as a prefix.</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="n">math</span><span class="o">::</span><span class="n">constants</span><span class="o">::*;</span>
+
+<span class="n">print</span><span class="o">(</span><span class="s2">&quot;Pi =&quot;</span><span class="o">,</span> <span class="n">PI</span><span class="o">);</span>
+<span class="n">print</span><span class="o">(</span><span class="s2">&quot;Euler&#39;s number =&quot;</span><span class="o">,</span> <span class="n">E</span><span class="o">);</span>
+</pre></div>
+</div>
+<p>Here, all constants from <cite>math::constants</cite> are imported, so you can directly use <cite>PI</cite> and <cite>E</cite> without the <cite>math::constants</cite> prefix.</p>
+</section>
+<section id="importing-multiple-modules">
+<h2>Importing Multiple Modules<a class="headerlink" href="#importing-multiple-modules" title="Link to this heading"></a></h2>
+<p>Symbolic allows you to import from multiple modules in a single statement. This can help organize code and reduce redundancy.</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="n">core</span><span class="o">::{</span><span class="n">io</span><span class="o">,</span> <span class="n">utils</span><span class="o">};</span>
+<span class="k">import</span> <span class="n">math</span><span class="o">::{</span><span class="n">constants</span><span class="o">,</span> <span class="n">trigonometry</span><span class="o">};</span>
+
+<span class="n">io</span><span class="o">.</span><span class="n">print</span><span class="o">(</span><span class="s2">&quot;Hello, Symbolic!&quot;</span><span class="o">);</span>
+<span class="n">utils</span><span class="o">.</span><span class="n">log</span><span class="o">(</span><span class="s2">&quot;This is a log message.&quot;</span><span class="o">);</span>
+<span class="n">print</span><span class="o">(</span><span class="s2">&quot;Pi =&quot;</span><span class="o">,</span> <span class="n">constants</span><span class="o">.</span><span class="n">PI</span><span class="o">);</span>
+<span class="n">print</span><span class="o">(</span><span class="s2">&quot;Sine of 30 degrees =&quot;</span><span class="o">,</span> <span class="n">trigonometry</span><span class="o">.</span><span class="n">sin</span><span class="o">(</span><span class="mi">30</span><span class="o">));</span>
+</pre></div>
+</div>
+<p>This example imports specific submodules from <cite>core</cite> and <cite>math</cite> to demonstrate how multiple components can be accessed efficiently.</p>
+</section>
+<section id="nested-imports">
+<h2>Nested Imports<a class="headerlink" href="#nested-imports" title="Link to this heading"></a></h2>
+<p>You can also import specific components from nested modules, allowing for more granular control over what is included.</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="n">core</span><span class="o">::{</span><span class="n">io</span><span class="o">,</span> <span class="n">utils</span><span class="o">};</span>
+<span class="k">import</span> <span class="n">math</span><span class="o">::{</span><span class="n">constants</span><span class="o">,</span> <span class="n">algebra</span><span class="o">::</span><span class="n">linear</span><span class="o">};</span>
+
+<span class="n">io</span><span class="o">.</span><span class="n">print</span><span class="o">(</span><span class="s2">&quot;Nested import example&quot;</span><span class="o">);</span>
+<span class="n">print</span><span class="o">(</span><span class="s2">&quot;Linear algebra matrix:&quot;</span><span class="o">,</span> <span class="n">linear</span><span class="o">.</span><span class="n">createMatrix</span><span class="o">([</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">],</span> <span class="o">[</span><span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">]));</span>
+</pre></div>
+</div>
+<p>This example demonstrates how to access deeply nested modules such as <cite>algebra::linear</cite> inside the <cite>math</cite> module.</p>
+</section>
+<section id="module-aliases-and-conflicts">
+<h2>Module Aliases and Conflicts<a class="headerlink" href="#module-aliases-and-conflicts" title="Link to this heading"></a></h2>
+<p>In case of naming conflicts, you can use aliases to resolve issues and make the code more readable.</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="n">core</span><span class="o">::</span><span class="n">io</span> <span class="n">as</span> <span class="n">c_io</span><span class="o">;</span>
+<span class="k">import</span> <span class="n">utils</span><span class="o">::</span><span class="n">io</span> <span class="n">as</span> <span class="n">u_io</span><span class="o">;</span>
+
+<span class="n">c_io</span><span class="o">.</span><span class="n">print</span><span class="o">(</span><span class="s2">&quot;Message from core io&quot;</span><span class="o">);</span>
+<span class="n">u_io</span><span class="o">.</span><span class="n">print</span><span class="o">(</span><span class="s2">&quot;Message from utils io&quot;</span><span class="o">);</span>
+</pre></div>
+</div>
+<p>In this case, both <cite>io</cite> from <cite>core</cite> and <cite>io</cite> from <cite>utils</cite> are imported with distinct aliases <cite>c_io</cite> and <cite>u_io</cite>, ensuring there is no conflict.</p>
+<p>Key Points:
+- <strong>Modular Programming</strong>: Symbolic supports modular programming, allowing you to split your code into separate modules and import them as needed.
+- <strong>Importing Specific Components</strong>: You can import individual components from modules to save memory and improve clarity.
+- <strong>Aliasing</strong>: Aliases make it easier to use modules or components with long names or resolve naming conflicts.
+- <strong>Multiple Imports</strong>: Symbolic allows importing multiple modules and components in a single statement.
+- <strong>Nested Imports</strong>: Nested modules can be imported, allowing you to access specific parts of a module efficiently.</p>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="classes.html"
+       title="previous chapter">← Classes and Objects</a>
+  </li>
+  <li class="next">
+    <a href="error_handling.html"
+       title="next chapter">Error Handling →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2024, Elijah Manda.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.1.3 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

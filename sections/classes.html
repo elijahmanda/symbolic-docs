@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Classes and Objects</title>
+    
+          <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="../_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="../_static/theme-vendors.js"></script> -->
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="next" title="Modules and Imports" href="modules.html" />
+  <link rel="prev" title="Functions" href="functions.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../index.html" class="home-link">
+    
+      <span class="site-name">Symbolic</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#wel-to-symbolic-language-s-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="syntax.html" class="reference internal ">Basic Syntax</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="datatypes.html" class="reference internal ">Data Types</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="assignments.html" class="reference internal ">Assignments</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="control_flow.html" class="reference internal ">Control Flow</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="functions.html" class="reference internal ">Functions</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Classes and Objects</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#defining-a-basic-class" class="reference internal">Defining a Basic Class</a></li>
+                
+                  <li class="toctree-l2"><a href="#inheritance-and-extending-classes" class="reference internal">Inheritance and Extending Classes</a></li>
+                
+                  <li class="toctree-l2"><a href="#method-overriding" class="reference internal">Method Overriding</a></li>
+                
+                  <li class="toctree-l2"><a href="#static-methods" class="reference internal">Static Methods</a></li>
+                
+                  <li class="toctree-l2"><a href="#summary" class="reference internal">Summary</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="modules.html" class="reference internal ">Modules and Imports</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="error_handling.html" class="reference internal ">Error Handling</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="examples.html" class="reference internal ">Examples</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="contributing.html" class="reference internal ">Contributing</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+    <li>Classes and Objects</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="functions.html"
+       title="previous chapter">← Functions</a>
+  </li>
+  <li class="next">
+    <a href="modules.html"
+       title="next chapter">Modules and Imports →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="classes-and-objects">
+<h1>Classes and Objects<a class="headerlink" href="#classes-and-objects" title="Link to this heading"></a></h1>
+<p>Classes in Symbolic are used to define custom types and encapsulate data and behaviors. Classes support inheritance, initialization, and method definition, providing a powerful way to model real-world entities and behaviors.</p>
+<section id="defining-a-basic-class">
+<h2>Defining a Basic Class<a class="headerlink" href="#defining-a-basic-class" title="Link to this heading"></a></h2>
+<p>To define a class in Symbolic, use the <cite>class</cite> keyword followed by the class name. You can define properties and methods for the class. The <cite>__init__</cite> method is used for initialization, allowing you to define how an object of that class should be constructed. Methods are defined as functions within the class, with <cite>self</cite> representing the instance of the class.</p>
+<section id="example-basic-class-definition">
+<h3>Example: Basic Class Definition<a class="headerlink" href="#example-basic-class-definition" title="Link to this heading"></a></h3>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="n">Person</span> <span class="o">{</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Anonymous&quot;</span><span class="o">;</span>
+
+    <span class="n">__init__</span> <span class="o">=</span> <span class="o">(</span><span class="n">self</span><span class="o">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Anonymous&quot;</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+        <span class="n">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="n">greet</span> <span class="o">=</span> <span class="o">(</span><span class="n">self</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+        <span class="n">print</span><span class="o">(</span><span class="s2">&quot;Hello, my name is&quot;</span><span class="o">,</span> <span class="n">self</span><span class="o">.</span><span class="n">name</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">Person</span><span class="o">(</span><span class="s2">&quot;Alice&quot;</span><span class="o">);</span>
+<span class="n">p</span><span class="o">.</span><span class="n">greet</span><span class="o">();</span>  <span class="c1"># Output: Hello, my name is Alice</span>
+</pre></div>
+</div>
+<p>In this example, a <cite>Person</cite> class is defined with a <cite>name</cite> property and a <cite>greet</cite> method. The <cite>__init__</cite> method initializes the <cite>name</cite> property, with a default value of <cite>“Anonymous”</cite>. An instance of the class is created and the <cite>greet</cite> method is called to print the person’s name.</p>
+</section>
+</section>
+<section id="inheritance-and-extending-classes">
+<h2>Inheritance and Extending Classes<a class="headerlink" href="#inheritance-and-extending-classes" title="Link to this heading"></a></h2>
+<p>Symbolic supports inheritance, allowing a class to extend another class and inherit its properties and methods. The <cite>extends</cite> keyword is used to define a subclass that inherits from a parent class. To call methods from the parent class, use the <cite>super()</cite> function.</p>
+<section id="example-inheritance">
+<h3>Example: Inheritance<a class="headerlink" href="#example-inheritance" title="Link to this heading"></a></h3>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="n">Employee</span> <span class="k">extends</span> <span class="o">(</span><span class="n">Person</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">salary</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+
+    <span class="n">__init__</span> <span class="o">=</span> <span class="o">(</span><span class="n">self</span><span class="o">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Anonymous&quot;</span><span class="o">,</span> <span class="n">salary</span><span class="o">=</span><span class="mi">0</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+        <span class="n">super</span><span class="o">().</span><span class="n">__init__</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>  <span class="c1"># Call the parent class&#39;s __init__</span>
+        <span class="n">self</span><span class="o">.</span><span class="n">salary</span> <span class="o">=</span> <span class="n">salary</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="n">setSalary</span> <span class="o">=</span> <span class="o">(</span><span class="n">self</span><span class="o">,</span> <span class="n">amount</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+        <span class="n">self</span><span class="o">.</span><span class="n">salary</span> <span class="o">=</span> <span class="n">amount</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="n">displayInfo</span> <span class="o">=</span> <span class="o">(</span><span class="n">self</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+        <span class="n">print</span><span class="o">(</span><span class="n">self</span><span class="o">.</span><span class="n">name</span><span class="o">,</span> <span class="s2">&quot;has a salary of&quot;</span><span class="o">,</span> <span class="n">self</span><span class="o">.</span><span class="n">salary</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">emp</span> <span class="o">=</span> <span class="n">Employee</span><span class="o">(</span><span class="s2">&quot;Bob&quot;</span><span class="o">,</span> <span class="mi">50000</span><span class="o">);</span>
+<span class="n">emp</span><span class="o">.</span><span class="n">displayInfo</span><span class="o">();</span>  <span class="c1"># Output: Bob has a salary of 50000</span>
+</pre></div>
+</div>
+<p>In this example, the <cite>Employee</cite> class extends <cite>Person</cite>, adding a new <cite>salary</cite> property. The <cite>__init__</cite> method calls the parent class’s <cite>__init__</cite> method using <cite>super()</cite>, and initializes the <cite>salary</cite> property. The <cite>displayInfo</cite> method prints the employee’s name and salary.</p>
+</section>
+</section>
+<section id="method-overriding">
+<h2>Method Overriding<a class="headerlink" href="#method-overriding" title="Link to this heading"></a></h2>
+<p>You can override methods from the parent class to change or extend their behavior. The overridden method should have the same signature as the method in the parent class.</p>
+<section id="example-method-overriding">
+<h3>Example: Method Overriding<a class="headerlink" href="#example-method-overriding" title="Link to this heading"></a></h3>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="n">Manager</span> <span class="k">extends</span> <span class="o">(</span><span class="n">Employee</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">__init__</span> <span class="o">=</span> <span class="o">(</span><span class="n">self</span><span class="o">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Anonymous&quot;</span><span class="o">,</span> <span class="n">salary</span><span class="o">=</span><span class="mi">0</span><span class="o">,</span> <span class="n">department</span><span class="o">=</span><span class="s2">&quot;General&quot;</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+        <span class="n">super</span><span class="o">().</span><span class="n">__init__</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="n">salary</span><span class="o">);</span>  <span class="c1"># Initialize parent class</span>
+        <span class="n">self</span><span class="o">.</span><span class="n">department</span> <span class="o">=</span> <span class="n">department</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="n">displayInfo</span> <span class="o">=</span> <span class="o">(</span><span class="n">self</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+        <span class="n">print</span><span class="o">(</span><span class="n">self</span><span class="o">.</span><span class="n">name</span><span class="o">,</span> <span class="s2">&quot;manages the&quot;</span><span class="o">,</span> <span class="n">self</span><span class="o">.</span><span class="n">department</span><span class="o">,</span> <span class="s2">&quot;department with a salary of&quot;</span><span class="o">,</span> <span class="n">self</span><span class="o">.</span><span class="n">salary</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">mgr</span> <span class="o">=</span> <span class="n">Manager</span><span class="o">(</span><span class="s2">&quot;Eve&quot;</span><span class="o">,</span> <span class="mi">70000</span><span class="o">,</span> <span class="s2">&quot;HR&quot;</span><span class="o">);</span>
+<span class="n">mgr</span><span class="o">.</span><span class="n">displayInfo</span><span class="o">();</span>  <span class="c1"># Output: Eve manages the HR department with a salary of 70000</span>
+</pre></div>
+</div>
+<p>In this example, the <cite>Manager</cite> class extends <cite>Employee</cite>, overriding the <cite>displayInfo</cite> method to include the department information.</p>
+</section>
+</section>
+<section id="static-methods">
+<h2>Static Methods<a class="headerlink" href="#static-methods" title="Link to this heading"></a></h2>
+<p>Static methods belong to the class itself rather than an instance of the class. They are useful for utility functions that don’t rely on instance-specific data. Static methods are defined using the <cite>static</cite> keyword and can be called without creating an instance of the class.</p>
+<section id="example-static-methods">
+<h3>Example: Static Methods<a class="headerlink" href="#example-static-methods" title="Link to this heading"></a></h3>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="n">MathHelper</span> <span class="o">{</span>
+    <span class="n">__init__</span> <span class="o">=</span> <span class="o">(</span><span class="n">self</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{}</span>
+
+    <span class="k">static</span> <span class="n">add</span> <span class="o">=</span> <span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">;</span>
+
+    <span class="k">static</span> <span class="n">multiply</span> <span class="o">=</span> <span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="n">sum_result</span> <span class="o">=</span> <span class="n">MathHelper</span><span class="o">.</span><span class="n">add</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">3</span><span class="o">);</span>  <span class="c1"># Output: 8</span>
+<span class="n">product_result</span> <span class="o">=</span> <span class="n">MathHelper</span><span class="o">.</span><span class="n">multiply</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="mi">6</span><span class="o">);</span>  <span class="c1"># Output: 24</span>
+</pre></div>
+</div>
+<p>In this example, the <cite>MathHelper</cite> class defines two static methods: <cite>add</cite> and <cite>multiply</cite>. These methods can be called directly on the class without creating an instance.</p>
+</section>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
+<p>Symbolic’s class system provides the following features:</p>
+<ol class="arabic simple">
+<li><p><strong>Basic Class Definition</strong>: Define classes with properties and methods, and use <cite>__init__</cite> for initialization.</p></li>
+<li><p><strong>Inheritance</strong>: Extend classes using <cite>extends</cite> and inherit methods and properties from the parent class.</p></li>
+<li><p><strong>Method Overriding</strong>: Override parent class methods to customize behavior.</p></li>
+<li><p><strong>Static Methods</strong>: Define utility functions that can be called directly on the class, without an instance.</p></li>
+<li><p><strong>Accessing Parent Methods</strong>: Use <cite>super()</cite> to call parent class methods.</p></li>
+</ol>
+<p>These features allow for flexible and powerful object-oriented programming in Symbolic.</p>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="functions.html"
+       title="previous chapter">← Functions</a>
+  </li>
+  <li class="next">
+    <a href="modules.html"
+       title="next chapter">Modules and Imports →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2024, Elijah Manda.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.1.3 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

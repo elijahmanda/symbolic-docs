@@ -18,18 +18,17 @@ jobs:
         python -m pip install --upgrade pip  # Upgrade pip
         pip install -r docs/requirements.txt  # Install dependencies from the requirements.txt in the docs folder
 
-    # Build the documentation with Sphinx
-    - name: Build Docs with Sphinx
-      uses: ammaraskar/sphinx-action@master
-      with:
-        docs-folder: "docs/"  # Specify the folder where the docs are located
-        build-command: "cd docs; make html"  # Build the HTML documentation
+    # Use make to build the documentation (calls make html)
+    - name: Build Docs with Make
+      run: |
+        cd docs  # Navigate to the docs directory
+        make html  # Run the make command to build the HTML documentation
 
     # Publish built docs to gh-pages branch
     - name: Commit documentation changes
       run: |
         git clone --branch gh-pages https://github.com/elijahmanda/symbolic-docs.git gh-pages  # Clone the gh-pages branch
-        cp -r _build/html/* gh-pages/  # Copy the generated HTML files to the gh-pages directory
+        cp -r docs/_build/html/* gh-pages/  # Copy the generated HTML files to the gh-pages directory
         cd gh-pages
         touch .nojekyll  # To avoid GitHub from trying to process the HTML files
         git config --local user.email "action@github.com"

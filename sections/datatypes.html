@@ -232,7 +232,7 @@
 </ul>
 <section id="example-list">
 <h3>Example: List<a class="headerlink" href="#example-list" title="Link to this heading"></a></h3>
-<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="n">List</span><span class="o">([</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">],</span> <span class="n">locked</span><span class="o">=</span><span class="n">true</span><span class="o">);</span> <span class="c1"># Immutable list</span>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="n">List</span><span class="o">([</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">],</span> <span class="n">locked</span><span class="o">=</span><span class="k">true</span><span class="o">);</span> <span class="c1"># Immutable list</span>
 <span class="k">try</span> <span class="o">{</span>
     <span class="n">numbers</span><span class="o">.</span><span class="n">append</span><span class="o">(</span><span class="mi">5</span><span class="o">);</span>  <span class="c1"># This will raise a ValueError because the list is locked</span>
 <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">e</span><span class="o">)</span> <span class="o">{</span>

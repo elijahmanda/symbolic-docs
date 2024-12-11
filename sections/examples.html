@@ -264,11 +264,11 @@
 <h2>Prime Number Checker<a class="headerlink" href="#prime-number-checker" title="Link to this heading"></a></h2>
 <p>Checks whether a number is prime.</p>
 <div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="n">isPrime</span> <span class="o">=</span> <span class="o">(</span><span class="n">n</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span> <span class="o">{</span> <span class="k">return</span> <span class="n">false</span><span class="o">;</span> <span class="o">}</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span> <span class="o">{</span> <span class="k">return</span> <span class="k">false</span><span class="o">;</span> <span class="o">}</span>
     <span class="k">loop</span> <span class="n">i</span> <span class="k">from</span> <span class="mi">2</span> <span class="k">to</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span> <span class="o">{</span>
-        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">{</span> <span class="k">return</span> <span class="n">false</span><span class="o">;</span> <span class="o">}</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">{</span> <span class="k">return</span> <span class="k">false</span><span class="o">;</span> <span class="o">}</span>
     <span class="o">}</span>
-    <span class="k">return</span> <span class="n">true</span><span class="o">;</span>
+    <span class="k">return</span> <span class="k">true</span><span class="o">;</span>
 <span class="o">};</span>
 <span class="n">print</span><span class="o">(</span><span class="s2">&quot;Is 17 prime?&quot;</span><span class="o">,</span> <span class="n">isPrime</span><span class="o">(</span><span class="mi">17</span><span class="o">));</span>
 <span class="n">print</span><span class="o">(</span><span class="s2">&quot;Is 20 prime?&quot;</span><span class="o">,</span> <span class="n">isPrime</span><span class="o">(</span><span class="mi">20</span><span class="o">));</span>
@@ -322,7 +322,7 @@
     <span class="n">vowels</span> <span class="o">=</span> <span class="s2">&quot;aeiouAEIOU&quot;</span><span class="o">;</span>
     <span class="n">temp</span> <span class="o">=</span> <span class="o">[];</span>
     <span class="n">temp</span><span class="o">.</span><span class="n">extend</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
-    <span class="k">return</span> <span class="n">temp</span><span class="o">.</span><span class="n">filter</span><span class="o">((</span><span class="n">chr</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">chr</span> <span class="k">in</span> <span class="n">vowels</span><span class="o">,</span> <span class="n">inplace</span><span class="o">=</span><span class="n">true</span><span class="o">).</span><span class="n">length</span><span class="o">;</span>
+    <span class="k">return</span> <span class="n">temp</span><span class="o">.</span><span class="n">filter</span><span class="o">((</span><span class="n">chr</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">chr</span> <span class="k">in</span> <span class="n">vowels</span><span class="o">,</span> <span class="n">inplace</span><span class="o">=</span><span class="k">true</span><span class="o">).</span><span class="n">length</span><span class="o">;</span>
 <span class="o">};</span>
 <span class="n">print</span><span class="o">(</span><span class="s2">&quot;Number of vowels in &#39;Hello World&#39; =&quot;</span><span class="o">,</span> <span class="n">countVowels</span><span class="o">(</span><span class="s2">&quot;Hello World&quot;</span><span class="o">));</span>
 </pre></div>

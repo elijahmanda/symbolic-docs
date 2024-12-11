@@ -1,0 +1,29 @@
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+__pycache__
+
+# Ignore Sphinx build directories
+_build/
+docs/_build/
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore any logs or temporary files
+*.log
+*.tmp
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Windows system files
+Thumbs.db
+
+# Ignore any IDE files (e.g., VS Code, PyCharm)
+.vscode/
+.idea/
+
+# Ignore requirements lock file (if you're using one)
+requirements-lock.txt

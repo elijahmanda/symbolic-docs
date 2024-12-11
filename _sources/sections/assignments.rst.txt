@@ -4,7 +4,7 @@ Assignments
 Symbolic supports multiple assignment styles, unpacking, and lazy evaluation.
 
 Variables and Assignments
--------------------------~~~
+-------------------------
 
 Normal Assignment
 ~~~~~~~~~~~~~~~~~

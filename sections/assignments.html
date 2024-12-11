@@ -101,13 +101,7 @@
             
               <ul>
                 
-                  <li class="toctree-l2"><a href="#normal-assignment" class="reference internal">Normal Assignment</a></li>
-                
-                  <li class="toctree-l2"><a href="#lazy-assignment" class="reference internal">Lazy Assignment</a></li>
-                
-                  <li class="toctree-l2"><a href="#multiple-assignments" class="reference internal">Multiple Assignments</a></li>
-                
-                  <li class="toctree-l2"><a href="#unpacking" class="reference internal">Unpacking</a></li>
+                  <li class="toctree-l2"><a href="#variables-and-assignments" class="reference internal">Variables and Assignments</a></li>
                 
               </ul>
             
@@ -211,10 +205,10 @@
   <section id="assignments">
 <h1>Assignments<a class="headerlink" href="#assignments" title="Link to this heading"></a></h1>
 <p>Symbolic supports multiple assignment styles, unpacking, and lazy evaluation.</p>
-<p>Variables and Assignments
-————————-~~~</p>
+<section id="variables-and-assignments">
+<h2>Variables and Assignments<a class="headerlink" href="#variables-and-assignments" title="Link to this heading"></a></h2>
 <section id="normal-assignment">
-<h2>Normal Assignment<a class="headerlink" href="#normal-assignment" title="Link to this heading"></a></h2>
+<h3>Normal Assignment<a class="headerlink" href="#normal-assignment" title="Link to this heading"></a></h3>
 <p>Assign values to variables using the <cite>=</cite> operator:</p>
 <div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">20</span><span class="o">;</span>
@@ -223,7 +217,7 @@
 </div>
 </section>
 <section id="lazy-assignment">
-<h2>Lazy Assignment<a class="headerlink" href="#lazy-assignment" title="Link to this heading"></a></h2>
+<h3>Lazy Assignment<a class="headerlink" href="#lazy-assignment" title="Link to this heading"></a></h3>
 <p>Lazy assignment (<cite>:=</cite>) delays evaluation until the variable is accessed:</p>
 <div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">:=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">10</span><span class="o">;</span>
 <span class="n">print</span><span class="o">(</span><span class="s2">&quot;x =&quot;</span><span class="o">,</span> <span class="n">x</span><span class="o">);</span>  <span class="c1"># Evaluates 5 + 10 here</span>
@@ -231,7 +225,7 @@
 </div>
 </section>
 <section id="multiple-assignments">
-<h2>Multiple Assignments<a class="headerlink" href="#multiple-assignments" title="Link to this heading"></a></h2>
+<h3>Multiple Assignments<a class="headerlink" href="#multiple-assignments" title="Link to this heading"></a></h3>
 <p>Assign the same value to multiple variables:</p>
 <div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">=</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">42</span><span class="o">;</span>
 <span class="n">print</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">z</span><span class="o">);</span>
@@ -239,7 +233,7 @@
 </div>
 </section>
 <section id="unpacking">
-<h2>Unpacking<a class="headerlink" href="#unpacking" title="Link to this heading"></a></h2>
+<h3>Unpacking<a class="headerlink" href="#unpacking" title="Link to this heading"></a></h3>
 <p>Unpack values from arrays, tuples, or similar structures into individual variables:</p>
 <div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">,</span> <span class="n">c</span><span class="o">)</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">];</span>
 <span class="n">print</span><span class="o">(</span><span class="s2">&quot;a =&quot;</span><span class="o">,</span> <span class="n">a</span><span class="o">,</span> <span class="s2">&quot;b =&quot;</span><span class="o">,</span> <span class="n">b</span><span class="o">,</span> <span class="s2">&quot;c =&quot;</span><span class="o">,</span> <span class="n">c</span><span class="o">);</span>
@@ -250,6 +244,7 @@
 <span class="n">print</span><span class="o">(</span><span class="s2">&quot;head =&quot;</span><span class="o">,</span> <span class="n">head</span><span class="o">,</span> <span class="s2">&quot;tail =&quot;</span><span class="o">,</span> <span class="n">tail</span><span class="o">);</span>
 </pre></div>
 </div>
+</section>
 </section>
 </section>
 

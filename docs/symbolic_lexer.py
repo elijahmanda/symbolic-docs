@@ -22,7 +22,7 @@ class SymbolicLexer(RegexLexer):
             (r'/\*', Comment.Multiline, 'multiline-comment'),
 
             # Keywords (sorted by length in descending order)
-            (r'\b(try|static|const|finally|case|context|with|wait|loop|return|terminate|whenever|context|function|assert|extends|catch|default|import|match|skip|in|class|enum|fn|stop|to|from|and|or|if|else|while|id)\b', Keyword),
+            (r'\b(try|static|const|finally|case|context|with|wait|loop|return|terminate|whenever|context|function|assert|extends|catch|default|import|match|skip|in|class|enum|fn|stop|to|from|and|or|if|else|while|id|as|false|true)\b', Keyword),
 
             # Symbols (sorted by length in descending order)
             (r'(\+\+|--|!=|==|:=|->|<=|>=|&&|\|\||\^=|\*=|/=|%=|<<|>>|\+|-|\*|/|%|\^|&|\||~|!|=|<|>|\[|\]|\{|\}|\(|\)|,|;|:|\.|\?|\@)', Operator),

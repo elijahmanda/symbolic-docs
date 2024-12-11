@@ -23,7 +23,7 @@ jobs:
       uses: ammaraskar/sphinx-action@master
       with:
         docs-folder: "docs/"  # Specify the folder where the docs are located
-        build-command: "sphinx-build -b html docs/ _build"  # Build the HTML documentation
+        build-command: "cd docs; make html"  # Build the HTML documentation
 
     # Publish built docs to gh-pages branch
     - name: Commit documentation changes

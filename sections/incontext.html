@@ -248,6 +248,8 @@
 <div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="k">in</span> <span class="k">context</span> <span class="o">&lt;</span><span class="n">owner</span><span class="o">&gt;</span> <span class="o">{</span>
     <span class="o">&lt;</span><span class="n">operation_1</span><span class="o">&gt;();</span>
     <span class="o">&lt;</span><span class="n">operation_2</span><span class="o">&gt;();</span>
+    <span class="o">&lt;</span><span class="n">name_1</span><span class="o">&gt;;</span>
+    <span class="o">&lt;</span><span class="n">name_2</span><span class="o">&gt;;</span>
     <span class="o">...</span>
 <span class="o">}</span>
 </pre></div>
@@ -268,15 +270,18 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>Explanation:
-- The methods <cite>transpose()</cite> and <cite>normalize()</cite> are executed on the <cite>matrix</cite> object.
-- This is equivalent to the following:</p>
-<blockquote>
-<div><div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="n">matrix</span><span class="o">.</span><span class="n">transpose</span><span class="o">();</span>
+<section id="explanation">
+<h3>Explanation:<a class="headerlink" href="#explanation" title="Link to this heading"></a></h3>
+<ul>
+<li><p>The methods <cite>transpose()</cite> and <cite>normalize()</cite> are executed on the <cite>matrix</cite> object.</p></li>
+<li><p>This is equivalent to the following:</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="n">matrix</span><span class="o">.</span><span class="n">transpose</span><span class="o">();</span>
 <span class="n">matrix</span><span class="o">.</span><span class="n">normalize</span><span class="o">();</span>
 </pre></div>
 </div>
-</div></blockquote>
+</li>
+</ul>
+</section>
 </section>
 <section id="outer-context-fallback">
 <h2>Outer Context Fallback<a class="headerlink" href="#outer-context-fallback" title="Link to this heading"></a></h2>
@@ -290,9 +295,13 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>Explanation:
-- The <cite>normalize()</cite> method is executed on <cite>matrix</cite>.
-- The variable <cite>epsilon</cite> is not part of the <cite>matrix</cite> context, so it is resolved from the outer scope.</p>
+<section id="id1">
+<h3>Explanation:<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>The <cite>normalize()</cite> method is executed on <cite>matrix</cite>.</p></li>
+<li><p>The variable <cite>epsilon</cite> is not part of the <cite>matrix</cite> context, so it is resolved from the outer scope.</p></li>
+</ul>
+</section>
 </section>
 <section id="nested-in-context-constructs">
 <h2>Nested <cite>in context</cite> Constructs<a class="headerlink" href="#nested-in-context-constructs" title="Link to this heading"></a></h2>
@@ -309,9 +318,13 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>Explanation:
-- The <cite>transpose()</cite> method is executed on <cite>matrix</cite>.
-- Within the nested context, the <cite>normalize()</cite> method is executed on <cite>vector</cite>.</p>
+<section id="id2">
+<h3>Explanation:<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>The <cite>transpose()</cite> method is executed on <cite>matrix</cite>.</p></li>
+<li><p>Within the nested context, the <cite>normalize()</cite> method is executed on <cite>vector</cite>.</p></li>
+</ul>
+</section>
 </section>
 <section id="use-cases">
 <h2>Use Cases<a class="headerlink" href="#use-cases" title="Link to this heading"></a></h2>

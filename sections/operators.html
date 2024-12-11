@@ -261,13 +261,14 @@
 <li><p><strong>`//=`</strong>: Floor divide and assign.</p></li>
 <li><p><strong>`^=`</strong>: Exponentiate and assign.</p></li>
 </ul>
-<p>Examples:
-.. code-block:: symbolic</p>
-<blockquote>
-<div><p>x = 10;       # Standard assignment
-y += 5;       # Increment y by 5
-total /= 2;   # Divide total by 2 and assign</p>
-</div></blockquote>
+<section id="examples">
+<h3>Examples:<a class="headerlink" href="#examples" title="Link to this heading"></a></h3>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>       <span class="c1"># Standard assignment</span>
+<span class="n">y</span> <span class="o">+=</span> <span class="mi">5</span><span class="o">;</span>       <span class="c1"># Increment y by 5</span>
+<span class="n">total</span> <span class="o">/=</span> <span class="mi">2</span><span class="o">;</span>   <span class="c1"># Divide total by 2 and assign</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="binary-operators">
 <h2>Binary Operators<a class="headerlink" href="#binary-operators" title="Link to this heading"></a></h2>
@@ -279,23 +280,25 @@ total /= 2;   # Divide total by 2 and assign</p>
 - Exponentiation: <strong>`**`</strong>
 - Comparison: <strong>`!=`</strong>, <strong>`&lt;`</strong>, <strong>`&gt;`</strong>
 - Range and Slicing: <strong>`..`</strong></p>
-<p>Examples:
-.. code-block:: symbolic</p>
-<blockquote>
-<div><p>sum = a + b;         # Addition
-range = 1..10;       # Range from 1 to 10
-slice = list[2..5];  # Slice from index 2 to 5</p>
-</div></blockquote>
+<section id="id1">
+<h3>Examples:<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="n">sum</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">;</span>         <span class="c1"># Addition</span>
+<span class="n">range</span> <span class="o">=</span> <span class="mi">1</span><span class="o">..</span><span class="mi">10</span><span class="o">;</span>       <span class="c1"># Range from 1 to 10</span>
+<span class="n">slice</span> <span class="o">=</span> <span class="n">list</span><span class="o">[</span><span class="mi">2</span><span class="o">..</span><span class="mi">5</span><span class="o">];</span>  <span class="c1"># Slice from index 2 to 5</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="absolute-value">
 <h2>Absolute Value<a class="headerlink" href="#absolute-value" title="Link to this heading"></a></h2>
 <p>The absolute value operator <cite>|expression|</cite> returns the magnitude of a number, ignoring its sign.</p>
-<p>Examples:
-.. code-block:: symbolic</p>
-<blockquote>
-<div><p>abs_value = <a href="#id1"><span class="problematic" id="id2">|x|</span></a>;   # Absolute value of x
-print(<a href="#id3"><span class="problematic" id="id4">|-8|</span></a>);       # Output: 8</p>
-</div></blockquote>
+<section id="id2">
+<h3>Examples:<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="n">abs_value</span> <span class="o">=</span> <span class="o">|</span><span class="n">x</span><span class="o">|;</span>   <span class="c1"># Absolute value of x</span>
+<span class="n">print</span><span class="o">(|-</span><span class="mi">8</span><span class="o">|);</span>       <span class="c1"># Output: 8</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="prefix-operators">
 <h2>Prefix Operators<a class="headerlink" href="#prefix-operators" title="Link to this heading"></a></h2>
@@ -306,13 +309,14 @@ print(<a href="#id3"><span class="problematic" id="id4">|-8|</span></a>);       
 - Bitwise: <strong>`~`</strong>
 - Ranges: <strong>`..`</strong>
 - Mixed: <strong>`+/-`</strong> (plus or minus)</p>
-<p>Examples:
-.. code-block:: symbolic</p>
-<blockquote>
-<div><p>value = -x;    # Negation
-range = ..5;   # Range from 0 to 5
-not_flag = !true;  # Logical NOT</p>
-</div></blockquote>
+<section id="id3">
+<h3>Examples:<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="o">-</span><span class="n">x</span><span class="o">;</span>    <span class="c1"># Negation</span>
+<span class="n">range</span> <span class="o">=</span> <span class="o">..</span><span class="mi">5</span><span class="o">;</span>   <span class="c1"># Range from 0 to 5</span>
+<span class="n">not_flag</span> <span class="o">=</span> <span class="o">!</span><span class="k">true</span><span class="o">;</span>  <span class="c1"># Logical NOT</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="postfix-operators">
 <h2>Postfix Operators<a class="headerlink" href="#postfix-operators" title="Link to this heading"></a></h2>
@@ -321,12 +325,13 @@ not_flag = !true;  # Logical NOT</p>
 - Logical: <strong>`!`</strong>
 - Ranges: <strong>`..`</strong>
 - Special: <strong>`°`</strong>, <strong>`’`</strong></p>
-<p>Examples:
-.. code-block:: symbolic</p>
-<blockquote>
-<div><p>angle = 45°;   # Represents 45 degrees
-complement = x’;   # Complement of x</p>
-</div></blockquote>
+<section id="id4">
+<h3>Examples:<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="n">angle</span> <span class="o">=</span> <span class="mi">45</span><span class="err">°</span><span class="o">;</span>   <span class="c1"># Represents 45 degrees</span>
+<span class="n">complement</span> <span class="o">=</span> <span class="n">x</span><span class="err">&#39;</span><span class="o">;</span>   <span class="c1"># Complement of x</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="equality-and-comparison-operators">
 <h2>Equality and Comparison Operators<a class="headerlink" href="#equality-and-comparison-operators" title="Link to this heading"></a></h2>
@@ -338,24 +343,19 @@ complement = x’;   # Complement of x</p>
 - <strong>`&gt;=`</strong>: Greater than or equal to
 - <strong>`==`</strong>: Equal to
 - <strong>`!=`</strong>: Not equal to</p>
-<p>Examples:
-.. code-block:: symbolic</p>
-<blockquote>
-<div><dl class="simple">
-<dt>if x &lt; y {</dt><dd><p>print(“x is less than y”);</p>
-</dd>
-</dl>
-<p>}
-elif x == y {</p>
-<blockquote>
-<div><p>print(“x is equal to y”);</p>
-</div></blockquote>
-<dl class="simple">
-<dt>} else {</dt><dd><p>print(“x is greater than y”);</p>
-</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
+<section id="id5">
+<h3>Examples:<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span> <span class="o">{</span>
+    <span class="n">print</span><span class="o">(</span><span class="s2">&quot;x is less than y&quot;</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="n">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span> <span class="o">{</span>
+    <span class="n">print</span><span class="o">(</span><span class="s2">&quot;x is equal to y&quot;</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="n">print</span><span class="o">(</span><span class="s2">&quot;x is greater than y&quot;</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="operator-summary">
 <h2>Operator Summary<a class="headerlink" href="#operator-summary" title="Link to this heading"></a></h2>

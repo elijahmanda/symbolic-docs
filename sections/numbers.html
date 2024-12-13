@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Numbers in Symbolic</title>
+    
+          <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="../_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="../_static/theme-vendors.js"></script> -->
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="next" title="Numerical Expressions and Implied Multiplication in Symbolic" href="numerical_expressions.html" />
+  <link rel="prev" title="Data Types" href="datatypes.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../index.html" class="home-link">
+    
+      <span class="site-name">Symbolic</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#welcome-to-symbolic-language-s-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="syntax.html" class="reference internal ">Basic Syntax</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="datatypes.html" class="reference internal ">Data Types</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Numbers in Symbolic</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#supported-number-formats" class="reference internal">Supported Number Formats</a></li>
+                
+                  <li class="toctree-l2"><a href="#basic-arithmetic-operations" class="reference internal">Basic Arithmetic Operations</a></li>
+                
+                  <li class="toctree-l2"><a href="#advanced-number-operations" class="reference internal">Advanced Number Operations</a></li>
+                
+                  <li class="toctree-l2"><a href="#base-conversions" class="reference internal">Base Conversions</a></li>
+                
+                  <li class="toctree-l2"><a href="#spoken-representation" class="reference internal">Spoken Representation</a></li>
+                
+                  <li class="toctree-l2"><a href="#prime-number-checks" class="reference internal">Prime Number Checks</a></li>
+                
+                  <li class="toctree-l2"><a href="#complex-numbers" class="reference internal">Complex Numbers</a></li>
+                
+                  <li class="toctree-l2"><a href="#parsing-strings" class="reference internal">Parsing Strings</a></li>
+                
+                  <li class="toctree-l2"><a href="#methods-by-class" class="reference internal">Methods by Class</a></li>
+                
+                  <li class="toctree-l2"><a href="#conclusion" class="reference internal">Conclusion</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="numerical_expressions.html" class="reference internal ">Numerical Expressions and Implied Multiplication in Symbolic</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="operators.html" class="reference internal ">Operators in Symbolic</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="control_flow.html" class="reference internal ">Control Flow</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="assignments.html" class="reference internal ">Assignments</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="functions.html" class="reference internal ">Functions</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="classes.html" class="reference internal ">Classes and Objects</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="incontext.html" class="reference internal ">The in context Construct</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="modules.html" class="reference internal ">Modules and Imports</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="error_handling.html" class="reference internal ">Error Handling</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="examples.html" class="reference internal ">Examples</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="contributing.html" class="reference internal ">Contributing</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+    <li>Numbers in Symbolic</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="datatypes.html"
+       title="previous chapter">← Data Types</a>
+  </li>
+  <li class="next">
+    <a href="numerical_expressions.html"
+       title="next chapter">Numerical Expressions and Implied Multiplication in Symbolic →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="numbers-in-symbolic">
+<h1>Numbers in Symbolic<a class="headerlink" href="#numbers-in-symbolic" title="Link to this heading"></a></h1>
+<p>This section provides a comprehensive guide to working with numbers in Symbolic, including syntax, features, methods, and advanced operations. Numbers are categorized as integers, floating-point numbers, and complex numbers, each with their own specialized methods and operations.</p>
+<section id="supported-number-formats">
+<h2>Supported Number Formats<a class="headerlink" href="#supported-number-formats" title="Link to this heading"></a></h2>
+<p>Symbolic supports multiple number formats, ensuring flexibility and convenience in numerical representation. Below are the primary formats supported:</p>
+<ul class="simple">
+<li><p><strong>Integers</strong>: Standard integers, binary (<cite>0b</cite>), octal (<cite>0o</cite>), hexadecimal (<cite>0x</cite>), and readable numbers with underscores (<cite>_</cite>).</p></li>
+<li><p><strong>Floating-Point Numbers</strong>: Standard floating-point numbers with support for exponential notation (<cite>e</cite>), underscores, and suffixes for large numbers (<cite>k</cite> for thousand, <cite>M</cite> for million, <cite>B</cite> for billion).</p></li>
+<li><p><strong>Complex Numbers</strong>: Represented using <cite>i</cite> or <cite>j</cite> for the imaginary unit.</p></li>
+</ul>
+<p>Examples:</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span>                <span class="c1"># An integer</span>
+<span class="mi">0</span><span class="n">b1010</span>            <span class="c1"># Binary representation, equivalent to 10</span>
+<span class="mi">0</span><span class="n">o12</span>              <span class="c1"># Octal representation, equivalent to 10</span>
+<span class="mi">0</span><span class="n">xA</span>               <span class="c1"># Hexadecimal representation, equivalent to 10</span>
+<span class="mi">1_000_000</span>         <span class="c1"># Readable integer, equivalent to 1000000</span>
+<span class="mi">3</span><span class="o">.</span><span class="mi">14</span>              <span class="c1"># A floating-point number</span>
+<span class="mi">2</span><span class="o">.</span><span class="mi">5</span><span class="n">e3</span>             <span class="c1"># Exponential notation, equivalent to 2500</span>
+<span class="mi">4</span><span class="o">.</span><span class="mi">8</span><span class="n">M</span>              <span class="c1"># Suffix for million, equivalent to 4800000.0</span>
+<span class="mi">5</span><span class="n">B</span>                <span class="c1"># Suffix for billion, equivalent to 5000000000</span>
+<span class="mi">7</span><span class="n">i</span>                <span class="c1"># A complex number with imaginary part 7</span>
+<span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="n">j</span>            <span class="c1"># A complex number with real part 2 and imaginary part 3</span>
+</pre></div>
+</div>
+</section>
+<section id="basic-arithmetic-operations">
+<h2>Basic Arithmetic Operations<a class="headerlink" href="#basic-arithmetic-operations" title="Link to this heading"></a></h2>
+<p>Symbolic provides support for standard arithmetic operations. These include addition, subtraction, multiplication, division, modulo, and exponentiation.</p>
+<p>Examples:</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">+</span> <span class="mi">3</span>               <span class="c1"># 8</span>
+<span class="mi">9</span> <span class="o">-</span> <span class="mi">4</span>               <span class="c1"># 5</span>
+<span class="mi">7</span> <span class="o">*</span> <span class="mi">6</span>               <span class="c1"># 42</span>
+<span class="mi">15</span> <span class="o">/</span> <span class="mi">2</span>              <span class="c1"># 7.5</span>
+<span class="mi">17</span> <span class="o">%</span> <span class="mi">3</span>              <span class="c1"># 2</span>
+<span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span>              <span class="c1"># 8 (Exponentiation)</span>
+</pre></div>
+</div>
+</section>
+<section id="advanced-number-operations">
+<h2>Advanced Number Operations<a class="headerlink" href="#advanced-number-operations" title="Link to this heading"></a></h2>
+<p>Symbolic includes advanced operations, such as factorial, logarithmic calculations, and trigonometric functions.</p>
+<ul>
+<li><p><strong>Factorial</strong>: Calculate the factorial of an integer.</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span><span class="o">.</span><span class="n">factorial</span><span class="o">()</span>       <span class="c1"># 120 (5 * 4 * 3 * 2 * 1)</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Logarithmic Operations</strong>: Compute logarithms to any base or natural logarithms.</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span><span class="o">.</span><span class="n">log</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>           <span class="c1"># 3.321928094887362 (Log base 2 of 10)</span>
+<span class="mi">100</span><span class="o">.</span><span class="n">log10</span><span class="o">()</span>         <span class="c1"># 2 (Log base 10 of 100)</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Trigonometric Operations</strong>: Compute sine, cosine, and tangent of a number (in radians).</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">.</span><span class="n">sin</span><span class="o">()</span>             <span class="c1"># 0.8414709848078965</span>
+<span class="mi">1</span><span class="o">.</span><span class="n">cos</span><span class="o">()</span>             <span class="c1"># 0.5403023058681398</span>
+<span class="mi">1</span><span class="o">.</span><span class="n">tan</span><span class="o">()</span>             <span class="c1"># 1.5574077246549023</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="base-conversions">
+<h2>Base Conversions<a class="headerlink" href="#base-conversions" title="Link to this heading"></a></h2>
+<p>Numbers in Symbolic can be converted between different bases, such as binary, octal, and hexadecimal.</p>
+<p>Examples:</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span><span class="o">.</span><span class="n">to_bin</span><span class="o">()</span>          <span class="c1"># &#39;0b1010&#39; (Binary representation of 10)</span>
+<span class="mi">10</span><span class="o">.</span><span class="n">to_oct</span><span class="o">()</span>          <span class="c1"># &#39;0o12&#39; (Octal representation of 10)</span>
+<span class="mi">10</span><span class="o">.</span><span class="n">to_hex</span><span class="o">()</span>          <span class="c1"># &#39;0xA&#39; (Hexadecimal representation of 10)</span>
+</pre></div>
+</div>
+</section>
+<section id="spoken-representation">
+<h2>Spoken Representation<a class="headerlink" href="#spoken-representation" title="Link to this heading"></a></h2>
+<p>Convert numbers to their spoken-word equivalents for better human understanding.</p>
+<p>Examples:</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="mi">123</span><span class="o">.</span><span class="n">spoken</span><span class="o">()</span>         <span class="c1"># &#39;one hundred twenty three&#39;</span>
+<span class="mi">4</span><span class="o">.</span><span class="mi">56</span><span class="o">.</span><span class="n">spoken</span><span class="o">()</span>        <span class="c1"># &#39;four point five six&#39;</span>
+<span class="o">(-</span><span class="mi">789</span><span class="o">).</span><span class="n">spoken</span><span class="o">()</span>      <span class="c1"># &#39;negative seven hundred eighty nine&#39;</span>
+<span class="o">(+</span><span class="mi">4</span><span class="o">.</span><span class="mi">8</span><span class="o">).</span><span class="n">spoken</span><span class="o">()</span>      <span class="c1"># &#39;positive four point eight&#39;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Operator Precedence Warning</strong>:</p>
+<p>Due to operator precedence, <cite>.</cite> (method access) has higher precedence than unary operators such as <cite>+</cite> or <cite>-</cite>.
+For example:</p>
+<ul>
+<li><p><cite>-3.spoken()</cite> will be evaluated as <cite>-(3.spoken())</cite>, resulting in an error because <cite>spoken()</cite> returns a string, and <cite>-</cite> cannot operate on strings.</p></li>
+<li><p>To avoid this, use parentheses to ensure the correct evaluation order:</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="o">(-</span><span class="mi">3</span><span class="o">).</span><span class="n">spoken</span><span class="o">()</span>    <span class="c1"># &#39;negative three&#39;</span>
+<span class="o">(+</span><span class="mi">7</span><span class="o">.</span><span class="mi">3</span><span class="o">).</span><span class="n">spoken</span><span class="o">()</span>  <span class="c1"># &#39;positive seven point three&#39;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="prime-number-checks">
+<h2>Prime Number Checks<a class="headerlink" href="#prime-number-checks" title="Link to this heading"></a></h2>
+<p>Symbolic includes methods to check whether a number is prime.</p>
+<p>Examples:</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="mi">13</span><span class="o">.</span><span class="n">is_prime</span><span class="o">()</span>        <span class="c1"># true (13 is a prime number)</span>
+<span class="mi">15</span><span class="o">.</span><span class="n">is_prime</span><span class="o">()</span>        <span class="c1"># false (15 is not a prime number)</span>
+</pre></div>
+</div>
+</section>
+<section id="complex-numbers">
+<h2>Complex Numbers<a class="headerlink" href="#complex-numbers" title="Link to this heading"></a></h2>
+<p>Symbolic supports operations specific to complex numbers, including magnitude, angle, and polar form.</p>
+<p>Examples:</p>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="o">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span><span class="n">i</span><span class="o">).</span><span class="n">abs</span><span class="o">()</span>       <span class="c1"># 5.0 (Magnitude of the complex number)</span>
+<span class="o">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span><span class="n">i</span><span class="o">).</span><span class="n">angle</span><span class="o">()</span>     <span class="c1"># 0.9272952180016122 (Angle in radians)</span>
+<span class="o">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span><span class="n">i</span><span class="o">).</span><span class="n">polar_form</span><span class="o">()</span><span class="c1"># &#39;(5.0, 0.9272952180016122)&#39; (Polar representation)</span>
+</pre></div>
+</div>
+</section>
+<section id="parsing-strings">
+<h2>Parsing Strings<a class="headerlink" href="#parsing-strings" title="Link to this heading"></a></h2>
+<p>All numeric classes (<cite>Int</cite>, <cite>Float</cite>, and <cite>Complex</cite>) provide a <cite>parse</cite> method for converting formatted strings into numeric types.</p>
+<section id="examples">
+<h3>Examples:<a class="headerlink" href="#examples" title="Link to this heading"></a></h3>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="n">Int</span><span class="o">.</span><span class="n">parse</span><span class="o">(</span><span class="s2">&quot;1,000&quot;</span><span class="o">)</span>      <span class="c1"># 1000</span>
+<span class="n">Float</span><span class="o">.</span><span class="n">parse</span><span class="o">(</span><span class="s2">&quot;3.14e2&quot;</span><span class="o">)</span>   <span class="c1"># 314.0</span>
+<span class="n">Complex</span><span class="o">.</span><span class="n">parse</span><span class="o">(</span><span class="s2">&quot;7 + 5i&quot;</span><span class="o">)</span> <span class="c1"># (7 + 5i)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="methods-by-class">
+<h2>Methods by Class<a class="headerlink" href="#methods-by-class" title="Link to this heading"></a></h2>
+<p>Symbolic numbers are categorized into <cite>Int</cite>, <cite>Float</cite>, and <cite>Complex</cite>. Below are the specific methods available for each class.</p>
+<ul class="simple">
+<li><p><strong>Int</strong>: Includes <cite>abs</cite>, <cite>factorial</cite>, <cite>gcd</cite>, <cite>lcm</cite>, <cite>is_prime</cite>, <cite>to_hex</cite>, <cite>to_bin</cite>, and more.</p></li>
+<li><p><strong>Float</strong>: Includes <cite>abs</cite>, <cite>sin</cite>, <cite>cos</cite>, <cite>log</cite>, <cite>sqrt</cite>, <cite>to_string</cite>, and more.</p></li>
+<li><p><strong>Complex</strong>: Includes <cite>abs</cite>, <cite>angle</cite>, <cite>polar_form</cite>, <cite>real</cite>, <cite>imag</cite>, and more.</p></li>
+</ul>
+<div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example Int Methods</span>
+<span class="mi">10</span><span class="o">.</span><span class="n">abs</span><span class="o">()</span>               <span class="c1"># 10</span>
+<span class="mi">5</span><span class="o">.</span><span class="n">gcd</span><span class="o">(</span><span class="mi">15</span><span class="o">)</span>              <span class="c1"># 5</span>
+<span class="mi">6</span><span class="o">.</span><span class="n">is_even</span><span class="o">()</span>            <span class="c1"># true</span>
+
+<span class="c1"># Example Float Methods</span>
+<span class="mi">3</span><span class="o">.</span><span class="mi">14</span><span class="o">.</span><span class="n">sqrt</span><span class="o">()</span>            <span class="c1"># 1.772453850905516</span>
+<span class="mi">0</span><span class="o">.</span><span class="mi">5</span><span class="o">.</span><span class="n">exp</span><span class="o">()</span>              <span class="c1"># 1.6487212707001282</span>
+
+<span class="c1"># Example Complex Methods</span>
+<span class="o">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span><span class="n">i</span><span class="o">).</span><span class="n">abs</span><span class="o">()</span>         <span class="c1"># 5.0</span>
+<span class="o">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span><span class="n">i</span><span class="o">).</span><span class="n">angle</span><span class="o">()</span>       <span class="c1"># 0.9272952180016122</span>
+</pre></div>
+</div>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
+<p>Symbolic’s extensive support for numbers makes it ideal for both basic and advanced numerical computations. With features ranging from simple arithmetic to complex operations, Symbolic is a robust choice for scientific, symbolic, and computational tasks.</p>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="datatypes.html"
+       title="previous chapter">← Data Types</a>
+  </li>
+  <li class="next">
+    <a href="numerical_expressions.html"
+       title="next chapter">Numerical Expressions and Implied Multiplication in Symbolic →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2024, Elijah Manda.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.1.3 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

@@ -25,7 +25,7 @@ class SymbolicLexer(RegexLexer):
             (r'\b(try|static|const|finally|case|context|with|wait|loop|return|terminate|whenever|context|function|assert|extends|catch|default|import|match|skip|in|class|enum|fn|stop|to|from|and|or|if|else|while|id|as|false|true)\b', Keyword),
 
             # Symbols (sorted by length in descending order)
-            (r'(>>=|<<=|\+\+|--|!=|==|:=|->|<=|>=|&&|\|\||\^=|\*=|/=|%=|\-=|\+=|<<|>>|\+|-|\*|/|%|\^|&|\||~|!|=|<|>|\[|\]|\{|\}|\(|\)|,|;|:|\.|\?|\@|°|')', Operator),
+            (r'(>>=|<<=|\+\+|--|!=|==|:=|->|<=|>=|&&|\|\||\^=|\*=|/=|%=|\-=|\+=|<<|>>|\+|-|\*|/|%|\^|&|\||~|!|=|<|>|\[|\]|\{|\}|\(|\)|,|;|:|\.|\?|\@|°|\')', Operator),
 
             # Numbers: Integers, Floats (with e/E), Octal, Binary, Hexadecimal with underscore separators
             (r'(?<![a-zA-Z_])\b(?:\d{,3}(?:_?\d{3})+|\d+)', Number.Integer),  # Integer (with optional separators)

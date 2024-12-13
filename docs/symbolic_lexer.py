@@ -29,7 +29,7 @@ class SymbolicLexer(RegexLexer):
 
             # Numbers: Integers, Floats (with e/E), Octal, Binary, Hexadecimal with underscore separators
             (r'(?<![a-zA-Z_])\b(?:\d{,3}(?:_?\d{3})+|\d+)', Number.Integer),  # Integer (with optional separators)
-            ('(?<![a-zA-Z_])(?:(?:\\d{,3}(?:_\\d{3})+|\\d{,3}(?: \\d{3})+|\\d+)(?<![\\.])(?:\\.\\d+(?:[eE][\\-\\+]?\\d+)?)|(?:\\d{,3}(?:_\\d{3})+|\\d{,3}(?: \\d{3})+|\\d+)(?<![\\.])(?:(?:\\.\\d+)?[eE][\\-\\+]?\\d+)', Number.Float),  # Float with optional exponent and underscores
+            ('(?<![a-zA-Z_])(?:(?:\\d{,3}(?:_\\d{3})+|\\d{,3}(?: \\d{3})+|\\d+)(?<![\\.])(?:\\.\\d+(?:[eE][\\-\\+]?\\d+)?)|(?:\\d{,3}(?:_\\d{3})+|\\d{,3}(?: \\d{3})+|\\d+)(?<![\\.])(?:(?:\\.\\d+)?[eE][\\-\\+]?\\d+)|(?:\\d{,3}(?:_\\d{3})+|\\d{,3}(?: \\d{3})+|\\d+)(?<![\\.])(?:\\.\\d+(?:[eE][\\-\\+]?\\d+)?)|(?:\\d{,3}(?:_\\d{3})+|\\d{,3}(?: \\d{3})+|\\d+)(?<![\\.])(?:(?:\\.\\d+)?[eE][\\-\\+]?\\d+)|(?:\\d{,3}(?:_\\d{3})+|\\d{,3}(?: \\d{3})+|\\d+)(?<![\\.])(?:\\.\\d+(?:[eE][\\-\\+]?\\d+)?)|(?:\\d{,3}(?:_\\d{3})+|\\d{,3}(?: \\d{3})+|\\d+)(?:(?<![\\.])(?:\\.\\d+)?[eE][\\-\\+]?\\d+)|(?:\\d{,3}(?:_\\d{3})+|\\d{,3}(?: \\d{3})+|\\d+)(?<![\\.])(?:\\.\\d+)|(?<![\\.])(?:\\.\\d+)(?:[eE][\\-\\+]?\\d+)?)', Number.Float),  # Float with optional exponent and underscores
             (r'(?<![a-zA-Z_])0[oO][0-7]+(?![a-zA-Z_])', Number.Oct),            # Octal (e.g., 0o755, 0o7_55)
             (r'(?<![a-zA-Z_])0[bB][01]+(?![a-zA-Z_])', Number.Bin),             # Binary (e.g., 0b1010, 0b1_010)
             (r'(?<![a-zA-Z_])0[xX][0-9a-fA-F]+(?![a-zA-Z_])', Number.Hex),      # Hexadecimal (e.g., 0x1F4, 0x_FF_FF)

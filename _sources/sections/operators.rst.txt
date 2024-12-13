@@ -123,7 +123,7 @@ Examples:
     if x < y {
         print("x is less than y");
     }
-    elif x == y {
+    else if x == y {
         print("x is equal to y");
     } else {
         print("x is greater than y");

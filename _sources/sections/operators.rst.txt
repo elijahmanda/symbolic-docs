@@ -128,8 +128,3 @@ Examples:
     } else {
         print("x is greater than y");
     }
-
-Operator Summary
-----------------
-
-Symbolic's operators provide a clean and intuitive syntax for mathematical, logical, and algorithmic expressions, catering to a wide range of applications.

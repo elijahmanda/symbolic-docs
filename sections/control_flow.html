@@ -340,6 +340,10 @@ Runs indefinitely until a <cite>stop</cite> is encountered.</p>
     <span class="c1"># Code block</span>
     <span class="k">if</span> <span class="o">&lt;</span><span class="n">condition</span><span class="o">&gt;</span> <span class="o">{</span> <span class="k">stop</span><span class="o">;</span> <span class="o">}</span>
 <span class="o">}</span>
+
+<span class="k">loop</span> <span class="o">{</span>
+    <span class="c1"># Code block</span>
+<span class="o">}</span>
 </pre></div>
 </div>
 </li>
@@ -515,14 +519,6 @@ Supports iterating over collections or ranges.</p>
 </pre></div>
 </div>
 </section>
-<section id="key-use-cases">
-<h3>Key Use Cases<a class="headerlink" href="#key-use-cases" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p><strong>Monitoring Thresholds</strong>: Automatically respond to changes exceeding predefined limits.</p></li>
-<li><p><strong>Task Management</strong>: Trigger alerts or take corrective actions based on system states.</p></li>
-<li><p><strong>Dynamic Termination</strong>: Stop monitoring once the required condition is resolved or no longer relevant.</p></li>
-</ul>
-</section>
 </section>
 <section id="time-delay">
 <h2>Time Delay<a class="headerlink" href="#time-delay" title="Link to this heading"></a></h2>
@@ -581,17 +577,6 @@ Supports iterating over collections or ranges.</p>
 </pre></div>
 </div>
 </section>
-<section id="use-cases">
-<h3>Use Cases<a class="headerlink" href="#use-cases" title="Link to this heading"></a></h3>
-<ol class="arabic simple">
-<li><p><strong>Pausing Execution</strong>
-Introduce delays between operations to manage timing or simulate real-time behavior.</p></li>
-<li><p><strong>Task Scheduling</strong>
-Use <cite>wait</cite> to create timed intervals between repetitive tasks or actions.</p></li>
-<li><p><strong>Debugging and Testing</strong>
-Pause execution to observe intermediate states during debugging or testing.</p></li>
-</ol>
-</section>
 <section id="advanced-example-timed-execution-with-wait">
 <h3>Advanced Example: Timed Execution with Wait<a class="headerlink" href="#advanced-example-timed-execution-with-wait" title="Link to this heading"></a></h3>
 <div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="n">print</span><span class="o">(</span><span class="s2">&quot;Starting process...&quot;</span><span class="o">);</span>
@@ -611,7 +596,6 @@ Pause execution to observe intermediate states during debugging or testing.</p><
 <li><p><strong>`else`</strong>: Executes a block of code when no previous conditions are true.</p></li>
 <li><p><strong>`match`</strong>: Provides a powerful way to match values to patterns and handle multiple conditions in a cleaner way.</p></li>
 </ul>
-<p>These control flow structures are integral for building flexible and responsive programs in Symbolic, enabling users to control the flow of execution based on dynamic conditions.</p>
 </section>
 </section>
 
@@ -699,14 +683,12 @@ Pause execution to observe intermediate states during debugging or testing.</p><
 <li><a class="reference internal" href="#example-temperature-alert-system">Example: Temperature Alert System</a></li>
 <li><a class="reference internal" href="#explanation">Explanation</a></li>
 <li><a class="reference internal" href="#advanced-example-multi-condition-monitoring">Advanced Example: Multi-Condition Monitoring</a></li>
-<li><a class="reference internal" href="#key-use-cases">Key Use Cases</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#time-delay">Time Delay</a><ul>
 <li><a class="reference internal" href="#id6">Syntax</a></li>
 <li><a class="reference internal" href="#supported-units">Supported Units</a></li>
 <li><a class="reference internal" href="#id7">Examples</a></li>
-<li><a class="reference internal" href="#use-cases">Use Cases</a></li>
 <li><a class="reference internal" href="#advanced-example-timed-execution-with-wait">Advanced Example: Timed Execution with Wait</a></li>
 </ul>
 </li>

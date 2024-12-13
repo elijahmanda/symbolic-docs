@@ -97,8 +97,3 @@ The `in context` construct is particularly useful in scenarios where:
 - You need to perform multiple operations on a single object.
 - There is a mix of methods/attributes within the context owner and variables from the outer scope.
 - Readability and code brevity are priorities.
-
-Conclusion
-----------
-
-The `in context` construct enhances Symbolic's ability to streamline operations and reduce repetitive code, making it a powerful feature for managing object-centric workflows.

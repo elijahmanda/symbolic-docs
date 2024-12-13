@@ -23,6 +23,7 @@ Features of Symbolic Language:
 
    sections/syntax
    sections/datatypes
+   sections/numbers
    sections/numerical_expressions
    sections/operators
    sections/control_flow

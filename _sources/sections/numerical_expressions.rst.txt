@@ -132,7 +132,7 @@ In these examples:
 - `totalCost = 10items` is interpreted as `totalCost = 10 * items`.
 - `pricePerUnit = 20perItem` is interpreted as `pricePerUnit = 20 * perItem`.
 
-This feature helps when dealing with quantities, units, or even more complex formulas, and enables more flexible, human-readable code.
+This feature helps when dealing with quantities, units, or even more complex formulas.
 
 Summary
 ----------

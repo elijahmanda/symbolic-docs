@@ -93,9 +93,8 @@ Counts the number of vowels in a string.
 
     countVowels = (s) -> {
         vowels = "aeiouAEIOU";
-        temp = [];
-        temp.extend(s);
-        return temp.filter((chr) -> chr in vowels, inplace=true).length;
+        letters = s.split();
+        return letters.filter((chr) -> chr in vowels, inplace=true).length;
     };
     print("Number of vowels in 'Hello World' =", countVowels("Hello World"));
 

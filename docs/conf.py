@@ -22,7 +22,7 @@ def setup(app):
 project = 'Symbolic'
 copyright = '2024, Elijah Manda'
 author = 'Elijah Manda'
-release = '0.0.1'
+release = '1.0.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

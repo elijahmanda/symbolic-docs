@@ -516,7 +516,7 @@
 <h2>Check Armstrong Number<a class="headerlink" href="#check-armstrong-number" title="Link to this heading"></a></h2>
 <p>Checks whether a number is an Armstrong number (a number equal to the sum of its digits raised to the power of the number of digits).</p>
 <div class="highlight-symbolic notranslate"><div class="highlight"><pre><span></span><span class="n">isArmstrong</span> <span class="o">=</span> <span class="o">(</span><span class="n">n</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
-    <span class="n">digits</span> <span class="o">=</span> <span class="n">toString</span><span class="o">(</span><span class="n">n</span><span class="o">).</span><span class="n">split</span><span class="o">();</span>
+    <span class="n">digits</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">to_string</span><span class="o">().</span><span class="n">split</span><span class="o">();</span>
     <span class="n">power</span> <span class="o">=</span> <span class="n">digits</span><span class="o">.</span><span class="n">length</span><span class="o">;</span>
     <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
     <span class="k">loop</span> <span class="n">d</span> <span class="k">from</span> <span class="n">digits</span> <span class="o">{</span>

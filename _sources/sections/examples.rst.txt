@@ -281,7 +281,7 @@ Checks whether a number is an Armstrong number (a number equal to the sum of its
 .. code-block:: symbolic
 
     isArmstrong = (n) -> {
-        digits = toString(n).split();
+        digits = n.to_string().split();
         power = digits.length;
         sum = 0;
         loop d from digits {

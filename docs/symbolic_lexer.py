@@ -32,7 +32,7 @@ class SymbolicLexer(RegexLexer):
             ('(?<![a-zA-Z_])(?:(?:\\d{,3}(?:_\\d{3})+|\\d{,3}(?: \\d{3})+|\\d+)(?<![\\.])(?:\\.\\d+(?:[eE][\\-\\+]?\\d+)?)|(?:\\d{,3}(?:_\\d{3})+|\\d{,3}(?: \\d{3})+|\\d+)(?<![\\.])(?:(?:\\.\\d+)?[eE][\\-\\+]?\\d+)', Number.Float),  # Float with optional exponent and underscores
             (r'(?<![a-zA-Z_])0[oO][0-7]+(?![a-zA-Z_])', Number.Oct),            # Octal (e.g., 0o755, 0o7_55)
             (r'(?<![a-zA-Z_])0[bB][01]+(?![a-zA-Z_])', Number.Bin),             # Binary (e.g., 0b1010, 0b1_010)
-            (r'(?<![a-zA-Z_])0[xX][0-9a-fA-F]+(?![a-zA-Z_])'', Number.Hex),      # Hexadecimal (e.g., 0x1F4, 0x_FF_FF)
+            (r'(?<![a-zA-Z_])0[xX][0-9a-fA-F]+(?![a-zA-Z_])', Number.Hex),      # Hexadecimal (e.g., 0x1F4, 0x_FF_FF)
             
             # Ordinal Numerals
             (r'(?<![a-zA-Z\d])\b(?:\d{,3}(?:_?\d{3})+|\d+)(?P<ordinal>nd|rd|st|th)\b(?![a-zA-Z\d])', Number),

@@ -32,7 +32,3 @@ Below is an example demonstrating the basic syntax in Symbolic:
        It can span multiple lines.
    */
 
-
-In this example, you can see how single-line comments are used for clarity. Every statement ends with a semicolon (`;`), and blocks (though not shown in this example) would be enclosed in curly braces (`{}`). 
-
-Remember that comments should be used to explain the intent behind complex or important parts of the code, improving readability and maintainability. It's a good practice to comment your code thoroughly, especially in larger projects or when working collaboratively.

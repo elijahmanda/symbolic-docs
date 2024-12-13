@@ -134,10 +134,8 @@ In these examples:
 
 This feature helps when dealing with quantities, units, or even more complex formulas, and enables more flexible, human-readable code.
 
-Summary of Numerical and Implied Multiplication Features
---------------------------------------------------------
-
-Symbolic simplifies the writing and evaluation of numerical expressions by supporting:
+Summary
+----------
 - **Numerical suffixes** for representing large numbers like `k` for thousands and `M` for millions.
 - **Implied multiplication** in expressions involving numbers, variables, and parentheses, reducing the need for explicit multiplication operators.
 - **Concise, natural mathematical expressions** that resemble traditional algebraic notation.

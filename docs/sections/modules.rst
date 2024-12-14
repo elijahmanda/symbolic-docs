@@ -107,6 +107,7 @@ In this case, both `io` from `core` and `io` from `utils` are imported with dist
 
 
 Key Points:
+--------------
 - **Modular Programming**: Symbolic supports modular programming, allowing you to split your code into separate modules and import them as needed.
 - **Importing Specific Components**: You can import individual components from modules to save memory and improve clarity.
 - **Aliasing**: Aliases make it easier to use modules or components with long names or resolve naming conflicts.

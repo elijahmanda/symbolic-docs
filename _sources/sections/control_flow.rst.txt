@@ -102,6 +102,7 @@ Syntax
        
        loop {
            # Code block
+           if <condition> { stop; }
        }
 
 4. **Iterating Collections**  

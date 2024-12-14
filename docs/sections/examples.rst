@@ -93,9 +93,8 @@ Counts the number of vowels in a string.
 
     countVowels = (s) -> {
         vowels = "aeiouAEIOU";
-        temp = [];
-        temp.extend(s);
-        return temp.filter((chr) -> chr in vowels, inplace=true).length;
+        letters = s.split();
+        return letters.filter((chr) -> chr in vowels, inplace=true).length;
     };
     print("Number of vowels in 'Hello World' =", countVowels("Hello World"));
 
@@ -282,7 +281,7 @@ Checks whether a number is an Armstrong number (a number equal to the sum of its
 .. code-block:: symbolic
 
     isArmstrong = (n) -> {
-        digits = toString(n).split();
+        digits = n.to_string().split();
         power = digits.length;
         sum = 0;
         loop d from digits {

@@ -9,7 +9,6 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath('../..'))
 sys.path.insert(0, os.path.abspath('.'))
 
 from pygments.lexers import get_lexer_by_name
@@ -23,7 +22,7 @@ def setup(app):
 project = 'Symbolic'
 copyright = '2024, Elijah Manda'
 author = 'Elijah Manda'
-release = '0.0.1'
+release = '1.0.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -45,5 +44,5 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'press'
+html_theme = 'furo'
 html_static_path = ['_static']

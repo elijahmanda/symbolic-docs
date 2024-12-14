@@ -99,6 +99,11 @@ Syntax
            # Code block
            if <condition> { stop; }
        }
+       
+       loop {
+           # Code block
+           if <condition> { stop; }
+       }
 
 4. **Iterating Collections**  
    Supports iterating over collections or ranges.  
@@ -278,14 +283,6 @@ Advanced Example: Multi-Condition Monitoring
     system_load += 30; # Triggers `load_check` when `system_load > 75`
     disk_space -= 70;  # Additional condition can further refine the trigger logic
 
-Key Use Cases
-^^^^^^^^^^^^^^^^^^
-
-- **Monitoring Thresholds**: Automatically respond to changes exceeding predefined limits.
-- **Task Management**: Trigger alerts or take corrective actions based on system states.
-- **Dynamic Termination**: Stop monitoring once the required condition is resolved or no longer relevant.
-
-
 Time Delay
 ---------------
 
@@ -345,18 +342,6 @@ Examples
     # Wait for 1 year
     wait 1year;
 
-Use Cases
-^^^^^^^^^^^^^^
-
-1. **Pausing Execution**  
-   Introduce delays between operations to manage timing or simulate real-time behavior.
-
-2. **Task Scheduling**  
-   Use `wait` to create timed intervals between repetitive tasks or actions.
-
-3. **Debugging and Testing**  
-   Pause execution to observe intermediate states during debugging or testing.
-
 
 Advanced Example: Timed Execution with Wait
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -378,4 +363,3 @@ Summary of Control Flow Statements
 - **`else`**: Executes a block of code when no previous conditions are true.
 - **`match`**: Provides a powerful way to match values to patterns and handle multiple conditions in a cleaner way.
 
-These control flow structures are integral for building flexible and responsive programs in Symbolic, enabling users to control the flow of execution based on dynamic conditions.

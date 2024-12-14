@@ -9,7 +9,7 @@ The Symbolic language is designed with simplicity in mind, featuring clear and i
 
 - **Comments**: 
   - **Single-line comments**: Use the hash symbol (`#`) to start a comment on a single line. Everything following the hash symbol on that line will be ignored by the interpreter. This is useful for brief explanations or notes within your code.
-  - **Multi-line comments**: Symbolic does not yet support multi-line comments. However, you can achieve multi-line commenting by placing a hash symbol (`#`) at the beginning of each line for comments that span multiple lines.
+  - **Multi-line comments**: Symbolic supports multi-line comments using the /* */ syntax. Any text enclosed within these delimiters will be treated as a comment, allowing for comments that span multiple lines.
 
 Example
 ----------
@@ -26,7 +26,9 @@ Below is an example demonstrating the basic syntax in Symbolic:
 
    # Function call
    result = some_function(x);  # Calling a function with argument x
+   /*
+       This is a multi-line comment
+       in Symbolic.
+       It can span multiple lines.
+   */
 
-In this example, you can see how single-line comments are used for clarity. Every statement ends with a semicolon (`;`), and blocks (though not shown in this example) would be enclosed in curly braces (`{}`). 
-
-Remember that comments should be used to explain the intent behind complex or important parts of the code, improving readability and maintainability. It's a good practice to comment your code thoroughly, especially in larger projects or when working collaboratively.

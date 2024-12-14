@@ -92,9 +92,6 @@ Explanation:
 
 Use Cases
 ---------
-
-The `in context` construct is particularly useful in scenarios where:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - You need to perform multiple operations on a single object.
 - There is a mix of methods/attributes within the context owner and variables from the outer scope.
 - Readability and code brevity are priorities.

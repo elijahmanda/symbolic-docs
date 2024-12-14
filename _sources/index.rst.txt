@@ -1,16 +1,18 @@
 Welcome to Symbolic Language's Documentation!
 =============================================
 
-**Symbolic Language** is an interpreted, dynamically-typed programming language tailored for advanced computational tasks across various domains, including mathematics, science, and engineering. It features concise syntax, lazy evaluation, and modular design, enabling developers to create complex systems efficiently and elegantly.
+**Symbolic Language** is an interpreted, dynamically-typed programming language designed for both general-purpose programming and advanced AI applications. It is ideal for creating AI assistants, chatbots, and smart systems, as well as for tackling complex computational tasks in mathematics, science, and engineering. With a concise syntax, modular design, and high-level abstractions, Symbolic offers a flexible environment for developers to build intelligent systems and efficient software.
 
-Explore this documentation to learn about the language's syntax, features, and advanced concepts, and to see examples that demonstrate its capabilities.
 
 Features of Symbolic Language:
+--------------------------------
 - **Dynamic Typing**: Flexible handling of variable types.
+- **Concise Syntax**: Write clean and readable code with minimal effort.
 - **Lazy Evaluation**: Evaluate expressions only when needed.
 - **Advanced Control Flow**: Support for conditional statements, loops, and match-case constructs.
-- **Modular Design**: Easily organize and reuse code across projects.
-- **Domain-Specific Libraries**: Built-in support for scientific and mathematical computations.
+- **Precision-Aware Computations**: Handle numeric operations with adjustable precision.
+- **AI and General-Purpose Libraries**: Built-in support for AI tasks, mathematical computations, string manipulation, and more.
+- **Interoperability**: Seamlessly integrate Symbolic with other systems and tools.
 
 .. note::
 
@@ -59,8 +61,9 @@ Key Highlights
 ==============
 
 - **Intuitive Syntax**: Inspired by modern programming languages, Symbolic is easy to learn and use.
-- **Precision-Aware Computations**: Handle mathematical operations with high precision.
+- **High-Level AI Capabilities**: Create AI apps with built-in NLP, Vision, and machine learning tools.
 - **Rich Standard Library**: Includes tools for handling numbers, strings, dates, and more.
+- **General-Purpose Programming**: Write versatile code for various domains and applications.
 - **Interoperability**: Designed to integrate seamlessly with other systems and tools.
 
 Getting Help
